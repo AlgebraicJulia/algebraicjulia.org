@@ -1,1 +1,0 @@
-# AlgebraicJulia.github.io
