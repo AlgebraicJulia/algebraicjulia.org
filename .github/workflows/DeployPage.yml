@@ -31,7 +31,7 @@ jobs:
     # the source of the package page is (`page/` by default).
     #
     # Adjust also `output=""` on the last line if you want
-    # the page to be deployed in a specific folder on gh-pages
+    # the page to be deployed in a specific folder on master
     # if you do that, make sure that you adjust the `prepath`
     # variable in `config.md` accordingly! so for instance
     # if you set here `folder="web"` change prepath for
@@ -47,5 +47,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         SSH: true
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: page/__site
