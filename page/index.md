@@ -14,7 +14,7 @@ More intro stuff:
 
 \end{:section}
 
-<!-- =============================
+<!-- ==============================
      Packages
      ============================== -->
 \begin{:section, title="Packages", name="Packages"}
@@ -23,9 +23,9 @@ More intro stuff:
     \table{"""
 | Name                                                                               | Description                                                   |                                                 Development Status                                                 |
 |:-----------------------------------------------------------------------------------|---------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------:|
-| [`Catlab.jl`](https://github.com/AlgebraicJulia/Catlab.jl)                         | A framework for applied category theory in the Julia language |                <img src="/assets/Maturing.svg"/> </br> The package is nearing it's `v1.0.0` release                |
-| [`AlgebraicPetri.jl`](https://github.com/AlgebraicJulia/AlgebraicPetri.jl)         | Build petri net agent based models compositionally            |  <img src="/assets/Developing.svg"/> </br> Functionality is mostly built-out, but the API may change substantially |
-| [`AlgebraicRelations.jl`](https://github.com/AlgebraicJulia/AlgebraicRelations.jl) | Build SQL categorically                                       | <img src="/assets/Developing.svg"/> </br> Functionality is mostly built-out, but the API may change substantially. |
+| [`Catlab.jl`](https://algebraicjulia.github.io/Catlab.jl/dev/)                          | A framework for applied category theory in the Julia language |                 <a class="github-button" href="https://github.com/AlgebraicJulia/Catlab.jl" data-size="large" aria-label="Catlab.jl on GitHub">View on GitHub</a></br> The package is nearing it's `v1.0.0` release                |
+| [`AlgebraicPetri.jl`](https://algebraicjulia.github.io/AlgebraicPetri.jl/dev/)         | Build petri net agent based models compositionally            |  <a class="github-button" href="https://github.com/AlgebraicJulia/AlgebraicPetri.jl" data-size="large" aria-label="View on GitHub">AlgebraicPetri.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially |
+| [`AlgebraicRelations.jl`](https://github.com/AlgebraicJulia/AlgebraicRelations.jl) | Build SQL categorically                                       | <a class="github-button" href="https://github.com/AlgebraicJulia/AlgebraicRelations.jl" data-size="large" aria-label="View on GitHub">AlgebraicRelations.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially. |
     """,class="table-responsive"}
 }
 
