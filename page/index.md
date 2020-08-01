@@ -4,13 +4,8 @@
 
 \begin{:section, title="Mission", name="Mission"}
 
-\lead{AlgebraicJulia is a new organization with the goal to...}
+\lead{AlgebraicJulia aims to create novel approaches to scientific computing based on applied category theory}
 
-More intro stuff:
-
-* Maybe
-* Some
-* Bullets
 
 \end{:section}
 
