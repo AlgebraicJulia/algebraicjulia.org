@@ -51,6 +51,12 @@ The following resources introduce specific topics in, or perspectives on, applie
 - [Category theory for programmers](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/) blog by Milewski, a programming languages viewpoint on category theory with examples from C++ and Haskell, also [available in PDF](https://github.com/hmemcpy/milewski-ctfp-pdf)
 - [Graphical linear algebra](https://graphicallinearalgebra.net/) blog by Sobocinski, on the string diagrammatic approach to linear algebra
 
+If your mathematical background includes basic abstract algebra, you might also try one of these more mathematical introductions to category theory:
+
+- [*Category theory in context*](http://www.math.jhu.edu/~eriehl/context.pdf) by Riehl
+- *Basic category theory* by Leinster ([arXiv](https://arxiv.org/abs/1612.09375))
+- *Category theory* by Awodey
+
 \end{:section}
 
 <!-- =============================
