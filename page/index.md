@@ -35,6 +35,20 @@ More info can be found at the [Pkg manager documentation](https://julialang.gith
 \end{:section}
 
 <!-- =============================
+     Learning
+    ============================== -->
+
+\begin{:section, title="Learning", name="Learning"}
+
+To learn more about applied category theory, try these introductory texts:
+
+- *An invitation to applied category: Seven sketches in compositionality* by Fong & Spivak ([arXiv](https://arxiv.org/abs/1803.05316))
+- *Category theory for the sciences* by Spivak ([arXiv](https://arxiv.org/abs/1302.6946))
+- "Physics, topology, logic and computation: A Rosetta Stone" by Baez & Stay ([arXiv](https://arxiv.org/abs/0903.0340)), an introduction to monoidal categories
+
+\end{:section}
+
+<!-- =============================
      Contributing
     ============================== -->
 
