@@ -47,7 +47,8 @@ To learn more about applied category theory, try these introductory texts:
 
 The following resources introduce specific topics in, or perspectives on, applied category theory:
 
-- "Physics, topology, logic and computation: A Rosetta Stone" by Baez & Stay ([arXiv](https://arxiv.org/abs/0903.0340)), an introduction to monoidal categories
+- "Physics, topology, logic and computation: A Rosetta Stone" by Baez & Stay ([arXiv](https://arxiv.org/abs/0903.0340)), an interdisciplinary introduction to monoidal categories
+- "Categories for the practising physicist" by Coecke & Paquette ([arXiv](https://arxiv.org/abs/0905.3010)), another introduction to monoidal categories, emphasizing quantum physics and relations
 - [Category theory for programmers](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/) blog by Milewski, a programming languages viewpoint on category theory with examples from C++ and Haskell, also [available in PDF](https://github.com/hmemcpy/milewski-ctfp-pdf)
 - [Graphical linear algebra](https://graphicallinearalgebra.net/) blog by Sobocinski, on the string diagrammatic approach to linear algebra
 
