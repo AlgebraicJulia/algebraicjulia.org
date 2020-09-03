@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="194.02"
+   inkscape:export-xdpi="194.02"
+   inkscape:export-filename="/home/micah/Documents/gtri/aske/AlgebraicJulia/AlgebraicJulia.github.io/page/_assets/logo-darkbg.png"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="logo-darkbg.svg"
+   id="svg53"
+   version="1.1"
+   viewBox="0.00 0.00 102.00 102.00"
+   height="102pt"
+   width="102pt">
+  <metadata
+     id="metadata59">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs57" />
+  <sodipodi:namedview
+     inkscape:current-layer="graph0"
+     inkscape:window-maximized="0"
+     inkscape:window-y="24"
+     inkscape:window-x="24"
+     inkscape:cy="68"
+     inkscape:cx="27.219373"
+     inkscape:zoom="5.1617647"
+     showgrid="false"
+     id="namedview55"
+     inkscape:window-height="1022"
+     inkscape:window-width="1862"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <g
+     transform="scale(1 1) rotate(0) translate(4 98)"
+     class="graph"
+     id="graph0">
+    <title
+       id="title2">G</title>
+    <!-- code1 -->
+    <g
+       class="node"
+       id="node1">
+      <title
+         id="title4">code1</title>
+      <ellipse
+         id="ellipse6"
+         ry="18"
+         rx="18"
+         cy="-76"
+         cx="18"
+         stroke="#3a5fcd"
+         fill="#4876ff" />
+    </g>
+    <!-- code2 -->
+    <g
+       class="node"
+       id="node2">
+      <title
+         id="title9">code2</title>
+      <ellipse
+         id="ellipse11"
+         ry="18"
+         rx="18"
+         cy="-18"
+         cx="18"
+         stroke="#cd3333"
+         fill="indianred" />
+    </g>
+    <!-- code1&#45;&gt;code2 -->
+    <g
+       class="edge"
+       id="edge2">
+      <title
+         id="title14">code1-&gt;code2</title>
+      <path
+         style="stroke:#e4e4e4;stroke-opacity:1"
+         id="path16"
+         d="M18,-57.89C18,-54.2 18,-50.21 18,-46.24"
+         stroke="black"
+         fill="none" />
+      <polygon
+         style="fill:#e4e4e4;fill-opacity:1;stroke:#e4e4e4;stroke-opacity:1"
+         id="polygon18"
+         points="21.5,-46 18,-36 14.5,-46 21.5,-46"
+         stroke="black"
+         fill="black" />
+    </g>
+    <!-- m1 -->
+    <g
+       class="node"
+       id="node3">
+      <title
+         id="title21">m1</title>
+      <ellipse
+         id="ellipse23"
+         ry="18"
+         rx="18"
+         cy="-76"
+         cx="76"
+         stroke="forestgreen"
+         fill="mediumseagreen" />
+    </g>
+    <!-- code1&#45;&gt;m1 -->
+    <g
+       class="edge"
+       id="edge1">
+      <title
+         id="title26">code1-&gt;m1</title>
+      <path
+         style="stroke:#e4e4e4;stroke-opacity:1"
+         id="path28"
+         d="M36.12,-76C39.99,-76 43.85,-76 47.71,-76"
+         stroke="black"
+         fill="none" />
+      <polygon
+         style="stroke:#e4e4e4;stroke-opacity:1;fill:#e4e4e4;fill-opacity:1"
+         id="polygon30"
+         points="47.93,-79.5 57.93,-76 47.93,-72.5 47.93,-79.5"
+         stroke="black"
+         fill="black" />
+    </g>
+    <!-- m2 -->
+    <g
+       class="node"
+       id="node4">
+      <title
+         id="title33">m2</title>
+      <ellipse
+         id="ellipse35"
+         ry="18"
+         rx="18"
+         cy="-18"
+         cx="76"
+         stroke="#b452cd"
+         fill="#cd69c9" />
+    </g>
+    <!-- code2&#45;&gt;m2 -->
+    <g
+       class="edge"
+       id="edge3">
+      <title
+         id="title38">code2-&gt;m2</title>
+      <path
+         style="stroke:#e4e4e4;stroke-opacity:1"
+         id="path40"
+         d="M36.12,-18C39.99,-18 43.85,-18 47.71,-18"
+         stroke="black"
+         fill="none" />
+      <polygon
+         style="stroke:#e4e4e4;stroke-opacity:1;fill:#e4e4e4;fill-opacity:1"
+         id="polygon42"
+         points="47.93,-21.5 57.93,-18 47.93,-14.5 47.93,-21.5"
+         stroke="black"
+         fill="black" />
+    </g>
+    <!-- m1&#45;&gt;m2 -->
+    <g
+       class="edge"
+       id="edge4">
+      <title
+         id="title45">m1-&gt;m2</title>
+      <path
+         style="stroke:#e4e4e4;stroke-opacity:1"
+         id="path47"
+         d="M76,-57.89C76,-54.2 76,-50.21 76,-46.24"
+         stroke="black"
+         fill="none" />
+      <polygon
+         style="stroke:#e4e4e4;stroke-opacity:1;fill:#e4e4e4;fill-opacity:1"
+         id="polygon49"
+         points="79.5,-46 76,-36 72.5,-46 79.5,-46"
+         stroke="black"
+         fill="black" />
+    </g>
+  </g>
+</svg>
