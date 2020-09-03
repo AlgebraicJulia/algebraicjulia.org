@@ -39,7 +39,7 @@ The latter allows you to plug in values that you would have defined here.
 @def docs_name = "Docs"
 
 @def add_nav_logo   = true
-@def nav_logo_path  = "/assets/logo.svg"
+@def nav_logo_path  = "/assets/logo-darkbg.svg"
 @def nav_logo_alt   = "AlgebraicJulia Logo"
 @def nav_logo_style = """
                       height:         45px;
