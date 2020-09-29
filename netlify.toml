@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/blog/*"
+  to = "https://blog.algebraicjulia.org/:splat"
+  status = 200
