@@ -49,3 +49,4 @@ jobs:
         SSH: true
         BRANCH: master
         FOLDER: page/__site
+        CLEAN_EXCLUDE: '["netlify.toml"]'
