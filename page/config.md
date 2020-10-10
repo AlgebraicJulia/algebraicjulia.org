@@ -23,7 +23,7 @@ The latter allows you to plug in values that you would have defined here.
 @def description = """
                    Bringing compositionality to technical computing.
                    """
-@def authors     = "Micah Halter"
+@def authors     = "The AlgebraicJulia team"
 
 <!--  NAVBAR SPECS
   NOTE:
