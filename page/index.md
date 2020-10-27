@@ -78,6 +78,6 @@ Being open source, you are free to modify, use, or change your copy of the code 
 
 If you find issues, please open an issue on the relevant package's repository and we will try and address it as soon as possible.
 
-If you have other ideas or questions, feel free to also open an issue, or discuss on the community [Zulip](https://julialang.zulipchat.com/#narrow/stream/230248-catlab.2Ejl) or [Slack #catlab channel](https://slackinvite.julialang.org/). We welcome all Category Theory and related disciplines!
+If you have other ideas or questions, feel free to also open an issue, or discuss on the community [Zulip](https://julialang.zulipchat.com/#narrow/stream/230248-catlab.2Ejl) or [Slack #catlab channel](https://julialang.org/slack/). We welcome all Category Theory and related disciplines!
 
 \end{:section}
