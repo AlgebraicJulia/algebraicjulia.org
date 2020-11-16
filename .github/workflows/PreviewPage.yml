@@ -1,8 +1,5 @@
-name: Build and Deploy
-on:
-  push:
-    branches:
-      - develop
+name: Deploy Preview
+on: pull_request
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -43,10 +40,13 @@ jobs:
             run(`$(npm_cmd()) install highlight.js purgecss`);
             import PkgPage;
             PkgPage.optimize(input="page", output="")'
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v1.1.10
       with:
-        SSH: true
-        BRANCH: master
-        FOLDER: page/__site
-        CLEAN_EXCLUDE: '["netlify.toml"]'
+        publish-dir: page/__site
+        production-deploy: false
+        enable-commit-comment: true
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

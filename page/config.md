@@ -144,4 +144,5 @@ commands that are defined and used in PkgPage.jl
 @def section_counter = 1
 @def showall         = true
 
-\newcommand{\center}[1]{~~~<div style="text-align:center;">~~~#1~~~</div>~~~}
+\newcommand{\html}[1]{~~~#1~~~}
+\newenvironment{center}{\html{<div style="text-align:center;">}}{\html{</div>}}
