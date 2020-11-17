@@ -61,6 +61,19 @@ If your mathematical background includes basic abstract algebra, you might also 
 \end{section}
 
 <!-- =============================
+     Materials
+    ============================== -->
+
+\begin{section}{title="Materials", name="Materials"}
+
+#### Invited Talks
+
+- **Compositional epidemiological modeling using structured cospans**, Micah
+    Halter and Evan Pattersion, *UC Riverside Categories Seminar*, November 2020; [Slides](/assets/slides/ucr-seminar-2020)
+
+\end{section}
+
+<!-- =============================
      Contributing
     ============================== -->
 
