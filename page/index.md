@@ -69,7 +69,7 @@ If your mathematical background includes basic abstract algebra, you might also 
 #### Talks
 
 - **Compositional epidemiological modeling using structured cospans**, Micah
-    Halter and Evan Pattersion, *UC Riverside Categories Seminar*, November 2020; [Slides](/assets/slides/ucr-seminar-2020), [Video](https://youtu.be/ptl6M9umJbw)
+    Halter and Evan Pattersion, *UC Riverside Categories Seminar*, November 2020; [Slides](/assets/slides/ucr-seminar-2020), [Video](https://youtu.be/z50pmzT8QMA)
 - **AlgebraicJulia: Applied Category Theory in Julia**, James Fairbanks,
     *JuliaCon*, July 2020; [Slides](/assets/slides/juliacon-2020.pdf), [Video](https://youtu.be/7zr2qnud4XM)
 
