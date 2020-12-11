@@ -68,12 +68,21 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### Talks
 
-- **Implementing open dynamical systems in Catlab**, Sophie Libkind, *UNAM Categories Seminar*, November 2020; [Video](https://youtu.be/ms085w6XeCs)
+- **(Co)relational computing in Catlab: The operad of UWDs and its algebras**,
+  Evan Patterson, *MIT Categories Seminar*, December 2020;
+  [Slides](/assets/slides/mit-seminar-2020),
+  [Video](https://youtu.be/MgJNqOxiSec)
+- **Implementing open dynamical systems in Catlab**, Sophie Libkind, *UNAM
+  Categories Seminar*, November 2020; [Video](https://youtu.be/ms085w6XeCs)
 - **Compositional epidemiological modeling using structured cospans**, Micah
-    Halter and Evan Pattersion, *UC Riverside Categories Seminar*, November 2020; [Slides](/assets/slides/ucr-seminar-2020), [Video](https://youtu.be/z50pmzT8QMA)
+  Halter and Evan Pattersion, *UC Riverside Categories Seminar*, November 2020;
+  [Slides](/assets/slides/ucr-seminar-2020),
+  [Video](https://youtu.be/z50pmzT8QMA)
 - **AlgebraicJulia: Applied category theory in Julia**, James Fairbanks,
-    *JuliaCon*, July 2020; [Slides](/assets/slides/juliacon-2020.pdf), [Video](https://youtu.be/7zr2qnud4XM)
-- **Realizing applied category theory in Julia**, Evan Patterson, *MIT Categories Seminar*, January 2020; [Video](https://youtu.be/7dmrDYQh4rc)
+  *JuliaCon*, July 2020; [Slides](/assets/slides/juliacon-2020.pdf),
+  [Video](https://youtu.be/7zr2qnud4XM)
+- **Realizing applied category theory in Julia**, Evan Patterson, *MIT
+  Categories Seminar*, January 2020; [Video](https://youtu.be/7dmrDYQh4rc)
 
 \end{section}
 
