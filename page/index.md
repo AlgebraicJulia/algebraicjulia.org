@@ -71,7 +71,7 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 - **C-sets for data analysis: graphs, relational data, and conjunctive
   queries**, Evan Patterson, *Category Theory and Applications Meetup*, January
-  2021; [Notebook](/assets/slides/act-meetup-2021/presentation.ipynb),
+  2021; [Notebook](https://nbviewer.jupyter.org/urls/www.algebraicjulia.org/assets/slides/act-meetup-2021/presentation.ipynb),
   [Video](https://www.meetup.com/Category-Theory/events/lcmnvrycccbhb/)
 - **(Co)relational computing in Catlab: The operad of UWDs and its algebras**,
   Evan Patterson, *MIT Categories Seminar*, December 2020;
