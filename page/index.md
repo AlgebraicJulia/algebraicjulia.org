@@ -67,8 +67,21 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 \begin{section}{title="Materials", name="Materials"}
 
+#### Publications
+
+- **Operadic modeling of dynamical systems: mathematics and computation**, 2021.
+  Sophie Libkind, Andrew Baas, Evan Patterson, James Fairbanks. *Applied
+  Category Theory 2021*. [arXiv](https://arxiv.org/abs/2105.12282)
+- **Wiring diagrams as normal forms for computing in symmetric monoidal
+  categories**, 2020. Evan Patterson, David Spivak, Dmitry Vagner. *Applied
+  Category Theory 2020*. [arXiv](https://arxiv.org/abs/2101.12046),
+  [Video](https://youtu.be/WuAhMo7sYy8)
+
 #### Talks
 
+- **Computational categorical algebra with Catlab**, James Fairbanks, *Graph
+  Transformation Theory and Applications (GReTA) Seminar*, May 2021;
+  [Video](https://youtu.be/JSJ-DD_dcjk)
 - **C-sets for data analysis: graphs, relational data, and conjunctive
   queries**, Evan Patterson, *Category Theory and Applications Meetup*, January
   2021; [Notebook](https://nbviewer.jupyter.org/urls/www.algebraicjulia.org/assets/slides/act-meetup-2021/presentation.ipynb),
