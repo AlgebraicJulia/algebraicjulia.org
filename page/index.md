@@ -76,6 +76,9 @@ If your mathematical background includes basic abstract algebra, you might also 
   categories**, 2020. Evan Patterson, David Spivak, Dmitry Vagner. *Applied
   Category Theory 2020*. [arXiv](https://arxiv.org/abs/2101.12046),
   [Video](https://youtu.be/WuAhMo7sYy8)
+- **Compositional scientific computing with Catlab and SemanticModels**, 2020.
+  Micah Halter, Evan Patterson, Andrew Baas, James Fairbanks. *Applied Category
+  Theory 2020.* [arXiv](https://arxiv.org/abs/2005.04831)
 
 #### Talks
 
