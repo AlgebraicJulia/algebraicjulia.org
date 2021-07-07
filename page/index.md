@@ -70,6 +70,8 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### Publications
 
+- **Categorical data structures for technical computing**, 2021. Evan Patterson,
+  Owen Lynch, James Fairbanks. [arXiv](https://arxiv.org/abs/2106.04703)
 - **Operadic modeling of dynamical systems: mathematics and computation**, 2021.
   Sophie Libkind, Andrew Baas, Evan Patterson, James Fairbanks. *Applied
   Category Theory 2021*. [arXiv](https://arxiv.org/abs/2105.12282)
