@@ -85,6 +85,10 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### Talks
 
+- **Categories of diagrams in data migration and computational physics**, Evan
+  Patterson, *Topos Institute Colloquium*, December 2021;
+  [Slides](/assets/slides/topos-colloquium-2021.pdf),
+  [Video](https://youtu.be/Ra-PLnog_M0)
 - **Computational categorical algebra with Catlab**, James Fairbanks, *Graph
   Transformation Theory and Applications (GReTA) Seminar*, May 2021;
   [Video](https://youtu.be/JSJ-DD_dcjk)
