@@ -41,7 +41,7 @@ jobs:
             import PkgPage;
             PkgPage.optimize(input="page", output="")'
     - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v1.1.10
+      uses: nwtgck/actions-netlify@v1.2
       with:
         publish-dir: page/__site
         production-deploy: false
