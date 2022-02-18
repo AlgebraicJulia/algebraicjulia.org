@@ -85,6 +85,10 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### Talks
 
+- **Principles and pitfalls of designing software for applied category theory**,
+  Evan Patterson, *Topos Institute Berkeley Seminar*, February 2022;
+  [Slides](/assets/slides/topos-seminar-2022-02.pdf),
+  [Video](https://youtu.be/cnWfksLlh1g)
 - **Categories of diagrams in data migration and computational physics**, Evan
   Patterson, *Topos Institute Colloquium*, December 2021;
   [Slides](/assets/slides/topos-colloquium-2021.pdf),
