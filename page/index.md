@@ -70,6 +70,8 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### Publications
 
+- **A diagrammatic view of differential equations in physics**, *Mathematics in Engineering*,
+  Evan Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks, submitted April 2022. [arXiv](https://arxiv.org/abs/2204.01843)
 - **An algebraic framework for rapid epidemic modeling**, 2022 Proceedings of the Royal Society A, 
   Sophie Libkind, Andrew Baas, Micah Halter, Evan Patterson, James Fairbanks.
   accepted for publication (submitted Sep 2021 accepted March 2022). [arXiv](https://arxiv.org/abs/2203.16345)
