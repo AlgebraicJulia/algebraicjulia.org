@@ -70,13 +70,17 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### Publications
 
-- **A diagrammatic view of differential equations in physics**, *Mathematics in Engineering*,
-  Evan Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks, submitted April 2022. [arXiv](https://arxiv.org/abs/2204.01843)
-- **An algebraic framework for rapid epidemic modeling**, 2022 Proceedings of the Royal Society A, 
-  Sophie Libkind, Andrew Baas, Micah Halter, Evan Patterson, James Fairbanks.
-  accepted for publication (submitted Sep 2021 accepted March 2022). [arXiv](https://arxiv.org/abs/2203.16345)
-- **Computational category-theoretic rewriting**, Submitted to the *International Conference on Graph Transformation*,
-  Kristopher Brown, Evan Patterson, Tyler Hanks, James Fairbanks.[arXiv](https://arxiv.org/abs/2111.03784)
+- **A diagrammatic view of differential equations in physics**, 2022. Evan
+  Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks.
+  [arXiv](https://arxiv.org/abs/2204.01843)
+- **An algebraic framework for rapid epidemic modeling**, 2022. Accepted at
+  *Proceedings of the Royal Society A*, Sophie Libkind, Andrew Baas, Micah
+  Halter, Evan Patterson, James Fairbanks.
+  [arXiv](https://arxiv.org/abs/2203.16345)
+- **Computational category-theoretic rewriting**, 2022. Submitted to the
+  *International Conference on Graph Transformation*, Kristopher Brown, Evan
+  Patterson, Tyler Hanks, James Fairbanks.
+  [arXiv](https://arxiv.org/abs/2111.03784)
 - **Categorical data structures for technical computing**, 2021. Evan Patterson,
   Owen Lynch, James Fairbanks. [arXiv](https://arxiv.org/abs/2106.04703)
 - **Operadic modeling of dynamical systems: mathematics and computation**, 2021.
