@@ -77,7 +77,7 @@ If your mathematical background includes basic abstract algebra, you might also 
   Andrew Baas, Micah Halter, Evan Patterson, James Fairbanks. Accepted at
   *Proceedings of the Royal Society A* [arXiv](https://arxiv.org/abs/2203.16345)
 - **Computational category-theoretic rewriting**, 2022. Kristopher Brown, Evan
-  Patterson, Tyler Hanks, James Fairbanks. Submitted to *International
+  Patterson, Tyler Hanks, James Fairbanks. Accepted at *International
   Conference on Graph Transformation*. [arXiv](https://arxiv.org/abs/2111.03784)
 - **Categorical data structures for technical computing**, 2021. Evan Patterson,
   Owen Lynch, James Fairbanks. Accepted at *Compositionality*.
