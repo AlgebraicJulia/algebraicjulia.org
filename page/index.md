@@ -63,19 +63,18 @@ If your mathematical background includes basic abstract algebra, you might also 
 \end{section}
 
 <!-- =============================
-     Materials
+     Publications
     ============================== -->
 
-\begin{section}{title="Materials", name="Materials"}
-
-#### Publications
+\begin{section}{title="Publications", name="Publications"}
 
 - **A diagrammatic view of differential equations in physics**, 2022. Evan
   Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks.
   [arXiv](https://arxiv.org/abs/2204.01843)
 - **An algebraic framework for rapid epidemic modeling**, 2022. Sophie Libkind,
   Andrew Baas, Micah Halter, Evan Patterson, James Fairbanks. Accepted at
-  *Proceedings of the Royal Society A* [arXiv](https://arxiv.org/abs/2203.16345)
+  *Proceedings of the Royal Society A*.
+  [arXiv](https://arxiv.org/abs/2203.16345)
 - **Computational category-theoretic rewriting**, 2022. Kristopher Brown, Evan
   Patterson, Tyler Hanks, James Fairbanks. Accepted at *International
   Conference on Graph Transformation*. [arXiv](https://arxiv.org/abs/2111.03784)
@@ -93,7 +92,13 @@ If your mathematical background includes basic abstract algebra, you might also 
   Micah Halter, Evan Patterson, Andrew Baas, James Fairbanks. *Applied Category
   Theory 2020.* [arXiv](https://arxiv.org/abs/2005.04831)
 
-#### Talks
+\end{section}
+
+<!-- =============================
+     Talks
+    ============================== -->
+
+\begin{section}{title="Talks", name="Talks"}
 
 - **Principles and pitfalls of designing software for applied category theory**,
   Evan Patterson, *Topos Institute Berkeley Seminar*, February 2022;
