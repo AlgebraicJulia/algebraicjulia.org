@@ -63,28 +63,36 @@ If your mathematical background includes basic abstract algebra, you might also 
 \end{section}
 
 <!-- =============================
-     Materials
+     Publications
     ============================== -->
 
-\begin{section}{title="Materials", name="Materials"}
+\begin{section}{title="Publications", name="Publications"}
 
-#### Publications
+#### 2022
 
 - **A diagrammatic view of differential equations in physics**, 2022. Evan
-  Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks.
-  [arXiv](https://arxiv.org/abs/2204.01843)
+  Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks. *Mathematics in
+  Engineering*. [arXiv](https://arxiv.org/abs/2204.01843),
+  [DOI](https://doi.org/10.3934/mine.2023036).
 - **An algebraic framework for rapid epidemic modeling**, 2022. Sophie Libkind,
   Andrew Baas, Micah Halter, Evan Patterson, James Fairbanks. Accepted at
-  *Proceedings of the Royal Society A* [arXiv](https://arxiv.org/abs/2203.16345)
+  *Proceedings of the Royal Society A*.
+  [arXiv](https://arxiv.org/abs/2203.16345)
 - **Computational category-theoretic rewriting**, 2022. Kristopher Brown, Evan
   Patterson, Tyler Hanks, James Fairbanks. Accepted at *International
   Conference on Graph Transformation*. [arXiv](https://arxiv.org/abs/2111.03784)
+
+#### 2021
+
 - **Categorical data structures for technical computing**, 2021. Evan Patterson,
   Owen Lynch, James Fairbanks. Accepted at *Compositionality*.
   [arXiv](https://arxiv.org/abs/2106.04703)
 - **Operadic modeling of dynamical systems: mathematics and computation**, 2021.
   Sophie Libkind, Andrew Baas, Evan Patterson, James Fairbanks. *Applied
   Category Theory 2021*. [arXiv](https://arxiv.org/abs/2105.12282)
+
+#### 2020
+
 - **Wiring diagrams as normal forms for computing in symmetric monoidal
   categories**, 2020. Evan Patterson, David Spivak, Dmitry Vagner. *Applied
   Category Theory 2020*. [arXiv](https://arxiv.org/abs/2101.12046),
@@ -93,12 +101,23 @@ If your mathematical background includes basic abstract algebra, you might also 
   Micah Halter, Evan Patterson, Andrew Baas, James Fairbanks. *Applied Category
   Theory 2020.* [arXiv](https://arxiv.org/abs/2005.04831)
 
-#### Talks
+\end{section}
+
+<!-- =============================
+     Talks
+    ============================== -->
+
+\begin{section}{title="Talks", name="Talks"}
+
+#### 2022
 
 - **Principles and pitfalls of designing software for applied category theory**,
   Evan Patterson, *Topos Institute Berkeley Seminar*, February 2022;
   [Slides](/assets/slides/topos-seminar-2022-02.pdf),
   [Video](https://youtu.be/cnWfksLlh1g)
+  
+#### 2021
+
 - **Categories of diagrams in data migration and computational physics**, Evan
   Patterson, *Topos Institute Colloquium*, December 2021;
   [Slides](/assets/slides/topos-colloquium-2021.pdf),
@@ -110,6 +129,9 @@ If your mathematical background includes basic abstract algebra, you might also 
   queries**, Evan Patterson, *Category Theory and Applications Meetup*, January
   2021; [Notebook](https://nbviewer.jupyter.org/urls/www.algebraicjulia.org/assets/slides/act-meetup-2021/presentation.ipynb),
   [Video](https://www.meetup.com/Category-Theory/events/lcmnvrycccbhb/)
+
+#### 2020
+
 - **(Co)relational computing in Catlab: The operad of UWDs and its algebras**,
   Evan Patterson, *MIT Categories Seminar*, December 2020;
   [Slides](/assets/slides/mit-seminar-2020),
