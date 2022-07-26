@@ -70,6 +70,9 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### 2022
 
+- **Compositional exploration of combinatorial scientific models**, 2022.
+  Kristopher Brown, Tyler Hanks, James Fairbanks. *Applied Category Theory
+  2022*. [arXiv](https://arxiv.org/abs/2206.08755)
 - **A diagrammatic view of differential equations in physics**, 2022. Evan
   Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks. *Mathematics in
   Engineering*. [arXiv](https://arxiv.org/abs/2204.01843),
