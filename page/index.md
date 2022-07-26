@@ -122,6 +122,11 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### 2022
 
+- **Typed and stratified models with slice categories** (on
+  [arXiv:2203.16345](https://arxiv.org/abs/2203.16345)), Sophie Libkind,
+  *Applied Category Theory 2022, Demo Track*, July 2022;
+  [Slides](https://msp.cis.strath.ac.uk/act2022/slides/ACT2022_slides_3530.pdf),
+  [Video](https://www.youtube.com/watch?v=RSoO46D5ojQ&t=4910s)
 - **Principles and pitfalls of designing software for applied category theory**,
   Evan Patterson, *Topos Institute Berkeley Seminar*, February 2022;
   [Slides](/assets/slides/topos-seminar-2022-02.pdf),
