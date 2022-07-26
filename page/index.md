@@ -72,14 +72,18 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 - **Compositional exploration of combinatorial scientific models**, 2022.
   Kristopher Brown, Tyler Hanks, James Fairbanks. *Applied Category Theory
-  2022*. [arXiv](https://arxiv.org/abs/2206.08755)
+  2022*. [arXiv](https://arxiv.org/abs/2206.08755),
+  [Slides](https://msp.cis.strath.ac.uk/act2022/slides/ACT2022_slides_2062.pdf),
+  [Video](https://www.youtube.com/watch?v=KsxKNzUnE6E&t=24918s)
 - **A diagrammatic view of differential equations in physics**, 2022. Evan
   Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks. *Mathematics in
   Engineering*. [arXiv](https://arxiv.org/abs/2204.01843),
   [DOI](https://doi.org/10.3934/mine.2023036)
 - **Compositional modeling with stock and flow diagrams**, 2022. John Baez,
   Xiaoyan Li, Sophie Libkind, Nathaniel Osgood, Evan Patterson. *Applied
-  Category Theory 2022*. [arXiv](https://arxiv.org/abs/2205.08373)
+  Category Theory 2022*. [arXiv](https://arxiv.org/abs/2205.08373),
+  [Slides](https://msp.cis.strath.ac.uk/act2022/slides/ACT2022_slides_8631.pdf),
+  [Video](https://www.youtube.com/watch?v=vbEtgFRiJ7U&t=26976s)
 - **An algebraic framework for rapid epidemic modeling**, 2022. Sophie Libkind,
   Andrew Baas, Micah Halter, Evan Patterson, James Fairbanks. Accepted at
   *Proceedings of the Royal Society A*.
