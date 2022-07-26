@@ -74,6 +74,9 @@ If your mathematical background includes basic abstract algebra, you might also 
   Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks. *Mathematics in
   Engineering*. [arXiv](https://arxiv.org/abs/2204.01843),
   [DOI](https://doi.org/10.3934/mine.2023036)
+- **Compositional modeling with stock and flow diagrams**, 2022. John Baez,
+  Xiaoyan Li, Sophie Libkind, Nathaniel Osgood, Evan Patterson. *Applied
+  Category Theory 2022*. [arXiv](https://arxiv.org/abs/2205.08373)
 - **An algebraic framework for rapid epidemic modeling**, 2022. Sophie Libkind,
   Andrew Baas, Micah Halter, Evan Patterson, James Fairbanks. Accepted at
   *Proceedings of the Royal Society A*.
