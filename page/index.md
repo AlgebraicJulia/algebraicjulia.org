@@ -73,14 +73,15 @@ If your mathematical background includes basic abstract algebra, you might also 
 - **A diagrammatic view of differential equations in physics**, 2022. Evan
   Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks. *Mathematics in
   Engineering*. [arXiv](https://arxiv.org/abs/2204.01843),
-  [DOI](https://doi.org/10.3934/mine.2023036).
+  [DOI](https://doi.org/10.3934/mine.2023036)
 - **An algebraic framework for rapid epidemic modeling**, 2022. Sophie Libkind,
   Andrew Baas, Micah Halter, Evan Patterson, James Fairbanks. Accepted at
   *Proceedings of the Royal Society A*.
   [arXiv](https://arxiv.org/abs/2203.16345)
 - **Computational category-theoretic rewriting**, 2022. Kristopher Brown, Evan
-  Patterson, Tyler Hanks, James Fairbanks. Accepted at *International
-  Conference on Graph Transformation*. [arXiv](https://arxiv.org/abs/2111.03784)
+  Patterson, Tyler Hanks, James Fairbanks. *International Conference on Graph
+  Transformation (ICGT 2022)*. [arXiv](https://arxiv.org/abs/2111.03784),
+  [DOI](https://doi.org/10.1007/978-3-031-09843-7_9)
 
 #### 2021
 
