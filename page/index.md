@@ -122,6 +122,12 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### 2022
 
+- **Diagrammatic differential equations: Formal categorical framework and
+  applications to multiphysics simulation** (on
+  [arXiv:2204.01843](https://arxiv.org/abs/2204.01843)), Timothy Hosgood,
+  *Applied Category Theory 2022, Non-proceedings Talk*, July 2022.
+  [Slides](https://msp.cis.strath.ac.uk/act2022/slides/ACT2022_slides_2217.pdf),
+  [Video](https://www.youtube.com/watch?v=vbEtgFRiJ7U&t=25646s)
 - **Typed and stratified models with slice categories** (on
   [arXiv:2203.16345](https://arxiv.org/abs/2203.16345)), Sophie Libkind,
   *Applied Category Theory 2022, Demo Track*, July 2022.
