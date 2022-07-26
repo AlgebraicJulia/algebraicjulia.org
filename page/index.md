@@ -124,45 +124,50 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 - **Typed and stratified models with slice categories** (on
   [arXiv:2203.16345](https://arxiv.org/abs/2203.16345)), Sophie Libkind,
-  *Applied Category Theory 2022, Demo Track*, July 2022;
+  *Applied Category Theory 2022, Demo Track*, July 2022.
   [Slides](https://msp.cis.strath.ac.uk/act2022/slides/ACT2022_slides_3530.pdf),
   [Video](https://www.youtube.com/watch?v=RSoO46D5ojQ&t=4910s)
+- **Individual.jl: Rewriting individual-based models for epidemiology using
+  graph rewriting** (on
+  [Individual.jl](https://github.com/slwu89/Individual.jl)), Sean Wu, *Applied
+  Category Theory 2022, Demo Track,* July 2022.
+  [Video](https://www.youtube.com/watch?v=iNdH_U-C1Nc&t=31313s)
 - **Principles and pitfalls of designing software for applied category theory**,
-  Evan Patterson, *Topos Institute Berkeley Seminar*, February 2022;
+  Evan Patterson, *Topos Institute Berkeley Seminar*, February 2022.
   [Slides](/assets/slides/topos-seminar-2022-02.pdf),
   [Video](https://youtu.be/cnWfksLlh1g)
   
 #### 2021
 
 - **Categories of diagrams in data migration and computational physics**, Evan
-  Patterson, *Topos Institute Colloquium*, December 2021;
+  Patterson, *Topos Institute Colloquium*, December 2021.
   [Slides](/assets/slides/topos-colloquium-2021.pdf),
   [Video](https://youtu.be/Ra-PLnog_M0)
 - **Computational categorical algebra with Catlab**, James Fairbanks, *Graph
-  Transformation Theory and Applications (GReTA) Seminar*, May 2021;
+  Transformation Theory and Applications (GReTA) Seminar*, May 2021.
   [Video](https://youtu.be/JSJ-DD_dcjk)
 - **C-sets for data analysis: graphs, relational data, and conjunctive
   queries**, Evan Patterson, *Category Theory and Applications Meetup*, January
-  2021; [Notebook](https://nbviewer.jupyter.org/urls/www.algebraicjulia.org/assets/slides/act-meetup-2021/presentation.ipynb),
+  2021. [Notebook](https://nbviewer.jupyter.org/urls/www.algebraicjulia.org/assets/slides/act-meetup-2021/presentation.ipynb),
   [Video](https://www.meetup.com/Category-Theory/events/lcmnvrycccbhb/)
 
 #### 2020
 
 - **(Co)relational computing in Catlab: The operad of UWDs and its algebras**,
-  Evan Patterson, *MIT Categories Seminar*, December 2020;
+  Evan Patterson, *MIT Categories Seminar*, December 2020.
   [Slides](/assets/slides/mit-seminar-2020),
   [Video](https://youtu.be/MgJNqOxiSec)
 - **Implementing open dynamical systems in Catlab**, Sophie Libkind, *UNAM
-  Categories Seminar*, November 2020; [Video](https://youtu.be/ms085w6XeCs)
+  Categories Seminar*, November 2020. [Video](https://youtu.be/ms085w6XeCs)
 - **Compositional epidemiological modeling using structured cospans**, Micah
-  Halter and Evan Pattersion, *UC Riverside Categories Seminar*, November 2020;
+  Halter and Evan Pattersion, *UC Riverside Categories Seminar*, November 2020.
   [Slides](/assets/slides/ucr-seminar-2020),
   [Video](https://youtu.be/z50pmzT8QMA)
 - **AlgebraicJulia: Applied category theory in Julia**, James Fairbanks,
-  *JuliaCon*, July 2020; [Slides](/assets/slides/juliacon-2020.pdf),
+  *JuliaCon*, July 2020. [Slides](/assets/slides/juliacon-2020.pdf),
   [Video](https://youtu.be/7zr2qnud4XM)
 - **Realizing applied category theory in Julia**, Evan Patterson, *MIT
-  Categories Seminar*, January 2020; [Video](https://youtu.be/7dmrDYQh4rc)
+  Categories Seminar*, January 2020. [Video](https://youtu.be/7dmrDYQh4rc)
 
 \end{section}
 
