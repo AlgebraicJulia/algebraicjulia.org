@@ -125,18 +125,18 @@ If your mathematical background includes basic abstract algebra, you might also 
 - **Diagrammatic differential equations: Formal categorical framework and
   applications to multiphysics simulation** (on
   [arXiv:2204.01843](https://arxiv.org/abs/2204.01843)), Timothy Hosgood,
-  *Applied Category Theory 2022, Non-proceedings Talk*, July 2022.
+  *Applied Category Theory 2022, non-proceedings talk*, July 2022.
   [Slides](https://msp.cis.strath.ac.uk/act2022/slides/ACT2022_slides_2217.pdf),
   [Video](https://www.youtube.com/watch?v=vbEtgFRiJ7U&t=25646s)
 - **Typed and stratified models with slice categories** (on
   [arXiv:2203.16345](https://arxiv.org/abs/2203.16345)), Sophie Libkind,
-  *Applied Category Theory 2022, Demo Track*, July 2022.
+  *Applied Category Theory 2022, demo track*, July 2022.
   [Slides](https://msp.cis.strath.ac.uk/act2022/slides/ACT2022_slides_3530.pdf),
   [Video](https://www.youtube.com/watch?v=RSoO46D5ojQ&t=4910s)
 - **Individual.jl: Rewriting individual-based models for epidemiology using
   graph rewriting** (on
   [Individual.jl](https://github.com/slwu89/Individual.jl)), Sean Wu, *Applied
-  Category Theory 2022, Demo Track,* July 2022.
+  Category Theory 2022, demo track,* July 2022.
   [Video](https://www.youtube.com/watch?v=iNdH_U-C1Nc&t=31313s)
 - **Principles and pitfalls of designing software for applied category theory**,
   Evan Patterson, *Topos Institute Berkeley Seminar*, February 2022.
@@ -153,8 +153,9 @@ If your mathematical background includes basic abstract algebra, you might also 
   Transformation Theory and Applications (GReTA) Seminar*, May 2021.
   [Video](https://youtu.be/JSJ-DD_dcjk)
 - **C-sets for data analysis: graphs, relational data, and conjunctive
-  queries**, Evan Patterson, *Category Theory and Applications Meetup*, January
-  2021. [Notebook](https://nbviewer.jupyter.org/urls/www.algebraicjulia.org/assets/slides/act-meetup-2021/presentation.ipynb),
+  queries**, Evan Patterson, *Category Theory and Applications Meetup*,
+  January 2021.
+  [Notebook](https://nbviewer.jupyter.org/urls/www.algebraicjulia.org/assets/slides/act-meetup-2021/presentation.ipynb),
   [Video](https://www.meetup.com/Category-Theory/events/lcmnvrycccbhb/)
 
 #### 2020
