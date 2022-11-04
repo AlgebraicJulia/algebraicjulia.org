@@ -1,0 +1,16 @@
+\documentclass[tikz]{standalone}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/?q=WzAsNCxbMCwwLCJQX3tcXHRleHRzZntzdHJhdGlmaWVkfX0iXSxbMSwwLCJQX3tcXHRleHRzZntzdHJhdGF9fSJdLFswLDEsIlBfe1xcdGV4dHNme2Rpc2Vhc2V9fSJdLFsxLDEsIlBfe1xcdGV4dHNme3R5cGV9fSJdLFsyLDNdLFsxLDNdLFswLDIsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDEsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDMsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dXQ==
+\begin{tikzcd}
+	{P_{\textsf{stratified}}} & {P_{\textsf{strata}}} \\
+	{P_{\textsf{disease}}} & {P_{\textsf{type}}}
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=1-2, to=2-2]
+	\arrow[dashed, from=1-1, to=2-1]
+	\arrow[dashed, from=1-1, to=1-2]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+\end{tikzcd}
+
+\end{document}
