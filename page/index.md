@@ -122,6 +122,10 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### 2022
 
+- **AlgebraicJulia: a compositional approach to technical computing**, Evan
+  Patterson, *NIST Workshop on Compositional Structures for Systems Engineering
+  and Design*, November 2022.
+  [Slides](/assets/slides/nist-workshop-2022/main.html)
 - **Diagrammatic differential equations: Formal categorical framework and
   applications to multiphysics simulation** (on
   [arXiv:2204.01843](https://arxiv.org/abs/2204.01843)), Timothy Hosgood,
