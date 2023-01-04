@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="talk_files/libs/clipboard/clipboard.min.js"></script>
+<script src="talk_files/libs/quarto-html/tabby.min.js"></script>
+<script src="talk_files/libs/quarto-html/popper.min.js"></script>
+<script src="talk_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="talk_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="talk_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="talk_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.2.269">
+
+  <meta name="author" content="Owen Lynch and James Fairbanks">
+  <title>Computational Category Theory in Applied Mathematics</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="talk_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="talk_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+  <link rel="stylesheet" href="talk_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="talk_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="talk_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="talk_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="talk_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script type="module" src="talk_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="talk_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Computational Category Theory in Applied Mathematics</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Owen Lynch and James Fairbanks 
+</div>
+</div>
+</div>
+
+</section>
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
+<ol type="1">
+<li>Why is AlgebraicJulia?</li>
+<li>Who is AlgebraicJulia?</li>
+<li>What is AlgebraicJulia?</li>
+<li>How is AlgebraicJulia?</li>
+<li>Why again is AlgebraicJulia?</li>
+</ol>
+</section>
+<section>
+<section id="part-1-why-is-algebraicjulia" class="title-slide slide level1 center">
+<h1>Part 1: Why is AlgebraicJulia?</h1>
+
+</section>
+<section id="compositional-modeling" class="slide level2">
+<h2>Compositional modeling</h2>
+
+<img data-src="epidemiology.png" class="r-stretch"><p><span class="citation" data-cites="halter_compositional_2020">Halter et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p>
+<aside class="notes">
+<ul>
+<li>One of the rallying cries of applied category theory is “compositionality”.</li>
+<li>The AlgebraicJulia project takes compositionality and makes it work in software tools for scientists</li>
+</ul>
+<p>But why is this a good idea; why do we expect that scientists will want to use compositional tools?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="informal-diagrams-that-should-be-string-diagrams" class="slide level2">
+<h2>“Informal diagrams that should be String Diagrams”</h2>
+<div id="fig-informal" class="quarto-layout-panel">
+<figure>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="subsystem_MY.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="mosquitos.png"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="glucose.jpg" width="400"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="feedback.png"></p>
+</div>
+</div>
+<p></p><figcaption>Figure&nbsp;1: Informal diagrams in the wild</figcaption><p></p>
+</figure>
+</div>
+<aside class="notes">
+<ul>
+<li>We see diagrams that look like this <em>all</em> the time in the wild</li>
+<li>This proves that scientists <em>want</em> to think in highlevel formalizations</li>
+<li>But when it comes time to make their models run on the computer, they have to use low-level formalizations, like general-purpose programming languages</li>
+<li>“The model is the code”</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-high-level-picture" class="slide level2">
+<h2>The high-level picture</h2>
+
+<img data-src="modeling_tasks.png" class="r-stretch"><aside class="notes">
+<p>When you make the model higher-level than “arbitrary code”, you get the side-benefit that you can now compile the model into multiple different types of code for different scientific tasks.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="part-2-who-is-algebraicjulia" class="title-slide slide level1 center">
+<h1>Part 2: Who is AlgebraicJulia?</h1>
+
+</section>
+<section id="history" class="slide level2">
+<h2>History</h2>
+<ul>
+<li>Evan Patterson started Catlab in 2017 to be a computer algebra system for applied category theory</li>
+<li>James Fairbanks started SemanticModels.jl in 2018 to achieve this “high-level modeling” dream</li>
+<li>In 2019, they started collaborating and created the AlgebraicJulia organization to maintain a variety of packages (often prefixed by “Algebraic”) around scientific modeling with applied category theory</li>
+<li>I joined in 2020 (the inflection point)</li>
+<li>Now companies like Merck are listing “experience with AlgebraicJulia” as a job requirement for scientists</li>
+</ul>
+<aside class="notes">
+<p>Ham up the connection between me joining and our present success.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="collaborators" class="slide level2">
+<h2>Collaborators</h2>
+<div id="collaborator-semagram">
+
+</div>
+<p>(made with Semagrams)</p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="94" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 93;"><span id="cb1-94"><a href="#cb1-94"></a>collaborators <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"collaborators.sema"</span>)<span class="op">.</span><span class="fu">text</span>()</span>
+<span id="cb1-95"><a href="#cb1-95"></a></span>
+<span id="cb1-96"><a href="#cb1-96"></a><span class="im">import</span> { GraphApp } <span class="im">from</span> <span class="st">"/main.js"</span></span>
+<span id="cb1-97"><a href="#cb1-97"></a></span>
+<span id="cb1-98"><a href="#cb1-98"></a>div <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"collaborator-semagram"</span>)</span>
+<span id="cb1-99"><a href="#cb1-99"></a></span>
+<span id="cb1-100"><a href="#cb1-100"></a>GraphApp<span class="op">.</span><span class="fu">main</span>(div<span class="op">,</span> collaborators)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>The main institutional support for Catlab comes from Topos and University of Florida</li>
+<li>Flex that the diagram is editable by moving Kris to Topos</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="part-3-what-is-algebraicjulia" class="title-slide slide level1 center">
+<h1>Part 3: What is AlgebraicJulia</h1>
+
+</section>
+<section id="the-landscape-of-algebraicjulia" class="slide level2">
+<h2>The landscape of AlgebraicJulia</h2>
+<table>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Catlab.jl</td>
+<td>Data structures, algorithms, visualization, computer algebra</td>
+</tr>
+<tr class="even">
+<td>AlgebraicDynamics.jl</td>
+<td>Open dynamical systems</td>
+</tr>
+<tr class="odd">
+<td>AlgebraicPetri.jl</td>
+<td>Petri nets operations, including rate equation simulation</td>
+</tr>
+<tr class="even">
+<td>AlgebraicRewriting.jl</td>
+<td>Rewriting systems for combinatorial data structures</td>
+</tr>
+<tr class="odd">
+<td>AlgebraicRelations.jl</td>
+<td>Database integration</td>
+</tr>
+<tr class="even">
+<td>CombinatorialSpaces.jl</td>
+<td>Meshes for PDEs</td>
+</tr>
+<tr class="odd">
+<td>Decapodes.jl</td>
+<td>Discrete Exterior Calculus</td>
+</tr>
+<tr class="even">
+<td>StockFlow.jl</td>
+<td>Stockflow diagrams and simulations</td>
+</tr>
+<tr class="odd">
+<td>Semagrams.jl</td>
+<td>User interfaces built around graphical syntax (Scala.js+Julia)</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Don’t go through this in depth, just say “we have a lot of packages, we’re going to dive into the specifics of two of them”.</p>
+<p>“The core package is Catlab, and then we have a bunch of ‘satelite’ packages”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="open-dynamical-systems-overview" class="slide level2">
+<h2>Open dynamical systems overview</h2>
+<p><span class="citation" data-cites="libkind_operadic_2022">Libkind, Baas, Patterson, et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p>
+<div id="fig-ecosystems" class="quarto-layout-panel">
+<figure>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="eco_hierarchy.svg"></p>
+<p></p><figcaption>A hierarchical model of an ecosystem</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="eco_solution.svg"></p>
+<p></p><figcaption>Solving the dynamics for that ecosystem</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption>Figure&nbsp;2: Ecosystem modeling in AlgebraicJulia.</figcaption><p></p>
+</figure>
+</div>
+<aside class="notes">
+<ul>
+<li>Ecosystems are often composed out of many interacting parts</li>
+<li>Category theory lets us capture this compositional structure</li>
+<li>AlgebraicJulia allows us to compute the composition, and then simulate the ecosystem together</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-math-of-open-dynamical-systems" class="slide level2">
+<h2>The math of open dynamical systems</h2>
+<div class="rmenv" title="Definition">
+<p>(<span class="citation" data-cites="vagner_algebras_2015">Vagner, Spivak, and Lerman (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span>) An <strong>open dynamical system</strong> consists of a state manifold <span class="math inline">\(X\)</span>, an input manifold <span class="math inline">\(X_{in}\)</span>, an output manifold <span class="math inline">\(X_{out}\)</span>, a readout function <span class="math inline">\(X \to X_{out}\)</span> and an evolution function <span class="math inline">\(X \times X_{in} \to T X\)</span>.</p>
+</div>
+<div class="rmenv" title="Proposition">
+<p>Open dynamical systems form an operad algebra of the operad of undirected wiring diagrams.</p>
+</div>
+<aside class="notes">
+<p>[citation needed]</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="multiphysics" class="slide level2">
+<h2>Multiphysics</h2>
+<p><span class="citation" data-cites="patterson_diagrammatic_2022">Patterson et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p>
+
+<img data-src="fluid_mechanics.png" class="r-stretch"><aside class="notes">
+<p>In fundamental physics, we generally assume there is a single foundation for our reality, and thus only “one equation” to solve. However, in practice we model large-scale phenomena with a large variety of equations because solving the fundamental equations is too hard, so we pick approximations suitable for given domains. Classical mechanics, thermodynamics, fluid mechanics, and electromagnetics are all such approximations. However, the real world does not always come in discrete problems which can be partitioned into exactly one well-studied category of physics. Often, models contain multiple different types of physics, which need to talk to each other in order to solve the overall problem. We call this “multiphysics”, and it is as hard as it sounds, especially when you want to actually compute numerical solutions to multiphysics problems on the computer. Unlike ODE solvers, there are so many degrees of freedom in the choice of numerical approximation for PDE solvers that general-purpose PDE solvers are quite difficult to write, and most high-performance PDE solvers use specialized computing for a specific physics problem.</p>
+<p>The AlgebraicJulia approach to multiphysics is to use a theory called the Discrete Exterior Calculus, which allows one to state physics problems in a way that makes clear some distinctions blurred by classical PDEs that are essential for efficient and accurate numerical computing. This already puts us at an advantage against traditional PDE solvers, but we also (need to ask more about story for interfacing between different physics).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conjugate-heat-transfer" class="slide level2">
+<h2>Conjugate heat transfer</h2>
+
+<img data-src="conjugate_heat_transfer.gif" class="r-stretch quarto-figure-center"><p class="caption">Heat transfer between a solid and a fluid</p><aside class="notes">
+<ul>
+<li>The circles are heated solids</li>
+<li>Heat transfers from the solid to the liquid</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="part-4-how-is-algebraicjulia" class="title-slide slide level1 center">
+<h1>Part 4: How is AlgebraicJulia?</h1>
+<p>What does it mean to “do category theory” on a computer?</p>
+<aside class="notes">
+<ul>
+<li>We have a different vision from the functional programmers</li>
+<li>Instead of just working with the category of types and functions, we manipulate values and expressions that represent objects and morphisms in categories. The manipulation itself may not be pure/mathematical, and might use mutation/imperative programming, but that’s fine; it’s happening at a different level from the actual category theory.</li>
+<li>This is a style of computational category theory that is somewhat unique to AlgebraicJulia, and very distinct from the style of computational category theory that the type theory community uses.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-problem-pushouts-in-finset" class="slide level2">
+<h2>The problem: pushouts in FinSet</h2>
+<div id="fig-pushouts" class="quarto-figure quarto-figure-center">
+<figure>
+<!-- https://q.uiver.app/?q=WzAsNCxbMCwxLCJYIl0sWzEsMCwiWCBcXHNxY3VwX1ogWSJdLFsyLDEsIlkiXSxbMSwyLCJaIl0sWzMsMCwiZiJdLFszLDIsImciLDJdLFsyLDFdLFswLDFdLFsxLDMsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dXQ== -->
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwxLCJYIl0sWzEsMCwiWCBcXHNxY3VwX1ogWSJdLFsyLDEsIlkiXSxbMSwyLCJaIl0sWzMsMCwiZiJdLFszLDIsImciLDJdLFsyLDFdLFswLDFdLFsxLDMsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dXQ==&amp;embed" width="475" height="432" style="border-radius: 8px; border: none;">
+</iframe>
+<p></p><figcaption>Figure&nbsp;3: A pushout in <span class="math inline">\(\mathsf{FinSet}\)</span></figcaption><p></p>
+</figure>
+</div>
+<div class="rmenv" title="Lemma">
+<p>In the category <span class="math inline">\(\mathsf{FinSet}\)</span>, the pushout of the above diagram is given by:</p>
+<p><span class="math display">\[ X \sqcup_Z Y = (X + Y)/\sim \]</span></p>
+<p>where <span class="math inline">\(\sim\)</span> is the equivalence relation generated by <span class="math inline">\(f(z) \sim g(z)\)</span> for all <span class="math inline">\(z \in Z\)</span>.</p>
+</div>
+<p>We want to actually <em>compute</em> pushouts!</p>
+<aside class="notes">
+<p>Take time so that people can match up the diagram to the lemma.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="finset-in-julia" class="slide level2">
+<h2>FinSet in Julia</h2>
+<p>We first need to represent finite sets on the computer</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># The finite set {1,...,n}</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">struct</span> FinSet</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  n<span class="op">::</span><span class="dt">Int</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="kw">end</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co"># The function i ↦ values[i]</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="kw">struct</span> FinFunction</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  dom<span class="op">::</span><span class="dt">FinSet</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>  codom<span class="op">::</span><span class="dt">FinSet</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>  values<span class="op">::</span><span class="dt">Vector{Int}</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1"></a>A, B <span class="op">=</span> <span class="fu">FinSet</span>(<span class="fl">3</span>), <span class="fu">FinSet</span>(<span class="fl">2</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>f <span class="op">=</span> <span class="fu">FinFunction</span>(A, B, [<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="a-data-structure-for-partitions" class="slide level2">
+<h2>A data structure for partitions</h2>
+<p>Julia has a data structure for representing a partition of <span class="math inline">\(\{1,\ldots,n\}\)</span>.</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">using</span> <span class="bu">DataStructures</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">const</span> Partition <span class="op">=</span> IntDisjointSets</span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co"># A partition of {1,...,10}</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>a <span class="op">=</span> <span class="fu">Partition</span>(<span class="fl">10</span>)</span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co"># Mutate a to make 3 and 5 be in the same equivalence class</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="fu">union!</span>(a, <span class="fl">3</span>, <span class="fl">5</span>)</span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="fu">union!</span>(a, <span class="fl">5</span>, <span class="fl">7</span>)</span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co"># Compute representative of equivalence class</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="fu">find_root!</span>(a, <span class="fl">3</span>) <span class="op">==</span> <span class="fu">find_root!</span>(a, <span class="fl">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>true</code></pre>
+</div>
+</div>
+</section>
+<section id="pushouts-in-julia" class="slide level2">
+<h2>Pushouts in Julia</h2>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">function</span> <span class="fu">pushout</span>(X<span class="op">::</span><span class="dt">FinSet</span>, Y<span class="op">::</span><span class="dt">FinSet</span>, Z<span class="op">::</span><span class="dt">FinSet</span>,</span>
+<span id="cb6-2"><a href="#cb6-2"></a>                 f<span class="op">::</span><span class="dt">FinFunction</span>, g<span class="op">::</span><span class="dt">FinFunction</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="co"># Start with the singleton partition of {1,...,|X|+|Y|}</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>  a <span class="op">=</span> <span class="fu">Partition</span>(X.n <span class="op">+</span> Y.n)</span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="co"># Construct the partition we want: f(z) ~ g(z) for all z ∈ Z</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="cf">for</span> z <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>Z.n</span>
+<span id="cb6-8"><a href="#cb6-8"></a>    <span class="fu">union!</span>(a, f.values[z], g.values[z])</span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="cf">end</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11"></a>  <span class="co"># Return a FinSet of size the number of unique roots</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a>  <span class="fu">FinSet</span>(<span class="fu">length</span>(<span class="fu">unique!</span>([<span class="fu">find_root!</span>(i) for i <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu">length</span>(a)])))</span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This runs in time <span class="math inline">\(\mathcal{O}(m \log m)\)</span>, where <code>m = X.n + Y.n</code>.</p>
+<p>Exercise: extend this code to also compute the legs of the cocone for pushout!</p>
+</section></section>
+<section>
+<section id="part-5-again-why-is-algebraicjulia" class="title-slide slide level1 center">
+<h1>Part 5: Again, why is AlgebraicJulia?</h1>
+<aside class="notes">
+<ul>
+<li>We talked about providing a high-level interface for scientists before</li>
+<li>Now we are going to talk about some other advantages that applied category theory has for scientific software development</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="technical-wins-data-structures-for-free-from-c-sets" class="slide level2">
+<h2>Technical wins: data structures for free from C-sets</h2>
+<p><span class="citation" data-cites="patterson_categorical_2022">Patterson, Lynch, and Fairbanks (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p>
+<div id="fig-acsets" class="quarto-layout-panel">
+<figure>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="graph.png"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="simplicial_set.png"></p>
+</div>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="petri_uwds.png"></p>
+</div>
+</div>
+<p></p><figcaption>Figure&nbsp;4: One data structure implementation, many data structures. Graphs, simplicial sets, petri nets, and undirected wiring diagrams.</figcaption><p></p>
+</figure>
+</div>
+<aside class="notes">
+<p>Having high-level formal languages which are closer to the ways that scientists informally use category theory is great, but it’s not the only use of category theory in scientific computing. From a purely engineering standpoint, programming with category theory in mind has a great number of advantages because the abstractions from category theory can be used to avoid duplication of code. For instance, we have a generic data structures library based on functors from finitely presented category to Set (acsets), and we have algorithms for limits and colimits written for all of these. This gives us “for free”:</p>
+<ul>
+<li>Graphs</li>
+<li>Directed wiring diagrams</li>
+<li>Undirected wiring diagrams</li>
+<li>Petri nets</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="technical-wins-algorithms-for-free-from-limitscolimits" class="slide level2">
+<h2>Technical wins: algorithms for free from limits/colimits</h2>
+<ul>
+<li>Compute connected components for a graph by coequalizing src and tgt</li>
+</ul>
+<!-- https://q.uiver.app/?q=WzAsMyxbMCwwLCJFIl0sWzEsMCwiViJdLFsyLDAsIkMiXSxbMCwxLCJcXG1hdGhybXt0Z3R9IiwyLHsib2Zmc2V0IjoxfV0sWzAsMSwiXFxtYXRocm17c3JjfSIsMCx7Im9mZnNldCI6LTF9XSxbMSwyXV0= -->
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsMyxbMCwwLCJFIl0sWzEsMCwiViJdLFsyLDAsIkMiXSxbMCwxLCJcXG1hdGhybXt0Z3R9IiwyLHsib2Zmc2V0IjoxfV0sWzAsMSwiXFxtYXRocm17c3JjfSIsMCx7Im9mZnNldCI6LTF9XSxbMSwyXV0=&amp;embed" width="432" height="176" style="border-radius: 8px; border: none;">
+</iframe>
+<ul>
+<li>Split up a population in a Petri net by (age group/vaccination status/region/etc.) using limits (<span class="citation" data-cites="libkind_algebraic_2022">Libkind, Baas, Halter, et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>)</li>
+</ul>
+
+<img data-src="stratify_petri.png" class="r-stretch"><aside class="notes">
+<p>We have generic algorithms to compute limits and colimits of any acset, and limits/colimits solve a variety of concrete problems</p>
+<p>The fact that our software is so generic means that we have to write less code overall, which means that we can invest more time in quality, performance, and correctness, and improvements to our base algorithms and data structures reap benefits in all of our application areas.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="technical-wins-algorithms-for-free-from-limitscolimits-1" class="slide level2">
+<h2>Technical wins: algorithms for free from limits/colimits</h2>
+<ul>
+<li>Compose structured cospans (c.f. <span class="citation" data-cites="baez_structured_2020">Baez and Courser (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>) of Petri nets</li>
+</ul>
+<p><img data-src="structured_petri.png"></p>
+<ul>
+<li>Compose operations in the operad of (directed/undirected) wiring diagrams</li>
+</ul>
+<p><img data-src="uwd.png"></p>
+</section>
+<section id="compositional-modeling-1" class="slide level2">
+<h2>Compositional modeling</h2>
+
+<img data-src="epidemiology.png" class="r-stretch"><p><span class="citation" data-cites="halter_compositional_2020">Halter et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p>
+<aside class="notes">
+<ul>
+<li>One of the rallying cries of applied category theory is “compositionality”.</li>
+<li>The AlgebraicJulia project takes compositionality and makes it work in software tools for scientists</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-future-of-algebraicjulia" class="slide level2">
+<h2>The Future of AlgebraicJulia</h2>
+<div class="rmenv" title="Strategy">
+<ol type="1">
+<li>Deliver high-quality results for individual domain-specific grants.</li>
+<li>Along the way, carefully develop and refine general-purpose open-source tools for scientists solving the world’s problems.</li>
+</ol>
+</div>
+<table>
+<colgroup>
+<col style="width: 34%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Funders and Collaborators</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Epidemiology</td>
+<td>ASKEM DARPA Project, University of Saskatchewan, DARPA YFA award for James</td>
+</tr>
+<tr class="even">
+<td>Multiphysics</td>
+<td>ASKEM DARPA Project</td>
+</tr>
+<tr class="odd">
+<td>Task modeling and planning</td>
+<td>PTG DARPA Project</td>
+</tr>
+<tr class="even">
+<td>Industrial process and data management</td>
+<td>CMU, NIST, Chevron</td>
+</tr>
+<tr class="odd">
+<td>Compositional statistical modeling</td>
+<td>AFOSR YIP award for Evan</td>
+</tr>
+<tr class="even">
+<td>Education and outreach</td>
+<td>Mozilla</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-can-you-do" class="slide level2">
+<h2>What can you do…</h2>
+<ul>
+<li><p>…if you will be on the job market soon:</p>
+<p>Topos Institute and James’s lab at University of Florida are growing and will be looking for researchers over the next couple years. There may not be positions lining up precisely with the timing of when you are looking, but keep in touch with us if this is something you are interested in.</p></li>
+<li><p>…if you want to use AlgebraicJulia?</p>
+<p>Read papers and blog posts on <a href="https://algebraicjulia.org">algebraicjulia.org</a>, and then ask us questions in the Julia Zulip: <a href="https://julialang.zulipchat.com">julialang.zulipchat.com</a>.</p></li>
+<li><p>…if you want to make your math be useful for scientists?</p>
+<p>There’s no magic bullet, but the two things that will help are</p>
+<ol type="1">
+<li>Keeping the end goal in mind: category theory as UI for high-level formal scientific modeling</li>
+<li>Talking to us (the AlgebraicJulia crew) about your research!</li>
+</ol></li>
+</ul>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-baez_structured_2020" class="csl-entry" role="doc-biblioentry">
+Baez, John C., and Kenny Courser. 2020. <span>“Structured Cospans.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.1911.04630">https://doi.org/10.48550/arXiv.1911.04630</a>.
+</div>
+<div id="ref-brown_compositional_2022" class="csl-entry" role="doc-biblioentry">
+Brown, Kristopher, Tyler Hanks, and James Fairbanks. 2022. <span>“Compositional Exploration of Combinatorial Scientific Models.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.2206.08755">https://doi.org/10.48550/arXiv.2206.08755</a>.
+</div>
+<div id="ref-halter_compositional_2020" class="csl-entry" role="doc-biblioentry">
+Halter, Micah, Evan Patterson, Andrew Baas, and James Fairbanks. 2020. <span>“Compositional Scientific Computing with Catlab and <span>SemanticModels</span>.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.2005.04831">https://doi.org/10.48550/arXiv.2005.04831</a>.
+</div>
+<div id="ref-libkind_algebraic_2022" class="csl-entry" role="doc-biblioentry">
+Libkind, Sophie, Andrew Baas, Micah Halter, Evan Patterson, and James Fairbanks. 2022. <span>“An Algebraic Framework for Structured Epidemic Modeling.”</span> <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em> 380 (2233): 20210309. <a href="https://doi.org/10.1098/rsta.2021.0309">https://doi.org/10.1098/rsta.2021.0309</a>.
+</div>
+<div id="ref-libkind_operadic_2022" class="csl-entry" role="doc-biblioentry">
+Libkind, Sophie, Andrew Baas, Evan Patterson, and James Fairbanks. 2022. <span>“Operadic Modeling of Dynamical Systems: Mathematics and Computation.”</span> <em>Electronic Proceedings in Theoretical Computer Science</em> 372 (November): 192–206. <a href="https://doi.org/10.4204/EPTCS.372.14">https://doi.org/10.4204/EPTCS.372.14</a>.
+</div>
+<div id="ref-patterson_diagrammatic_2022" class="csl-entry" role="doc-biblioentry">
+Patterson, Evan, Andrew Baas, Timothy Hosgood, and James Fairbanks. 2022. <span>“A Diagrammatic View of Differential Equations in Physics.”</span> <em>Mathematics in Engineering</em> 5 (2): 1–59. <a href="https://doi.org/10.3934/mine.2023036">https://doi.org/10.3934/mine.2023036</a>.
+</div>
+<div id="ref-patterson_categorical_2022" class="csl-entry" role="doc-biblioentry">
+Patterson, Evan, Owen Lynch, and James Fairbanks. 2022. <span>“Categorical Data Structures for Technical Computing.”</span> <em>Compositionality</em> 4 (December): 5. <a href="https://doi.org/10.32408/compositionality-4-5">https://doi.org/10.32408/compositionality-4-5</a>.
+</div>
+<div id="ref-vagner_algebras_2015" class="csl-entry" role="doc-biblioentry">
+Vagner, Dmitry, David I. Spivak, and Eugene Lerman. 2015. <span>“Algebras of Open Dynamical Systems on the Operad of Wiring Diagrams.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.1408.1598">https://doi.org/10.48550/arXiv.1408.1598</a>.
+</div>
+</div>
+
+<img src="headshots/algjulia_logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>Computational Category Theory in Applied Mathematics</p>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="talk_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="talk_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="talk_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="talk_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="talk_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="talk_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="talk_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="talk_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="talk_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="talk_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1500,
+
+        height: 1200,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script type="ojs-module-contents">
+    {"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"collaborators = FileAttachment(\"collaborators.sema\").text()\n\nimport { GraphApp } from \"/main.js\"\n\ndiv = document.getElementById(\"collaborator-semagram\")\n\nGraphApp.main(div, collaborators)\n"}]}
+    </script>
+    <script type="module">
+    window._ojs.paths.runtimeToDoc = "../../..";
+    window._ojs.paths.runtimeToRoot = "../../..";
+    window._ojs.paths.docToRoot = "";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

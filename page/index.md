@@ -120,6 +120,10 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 \begin{section}{title="Talks", name="Talks"}
 
+#### 2023
+
+- **Computational Category Theory in Applied Mathematics**, Owen Lynch and James Fairbanks, *Joint Mathematics Meetings*, January 2023. [Slides](/assets/slides/jmm-talk-2023/talk.html)
+
 #### 2022
 
 - **AlgebraicJulia: a compositional approach to technical computing**, Evan
