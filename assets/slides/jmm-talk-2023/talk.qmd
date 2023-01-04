@@ -77,7 +77,7 @@ When you make the model higher-level than "arbitrary code", you get the side-ben
 - James Fairbanks started SemanticModels.jl in 2018 to achieve this "high-level modeling" dream
 - In 2019, they started collaborating and created the AlgebraicJulia organization to maintain a variety of packages (often prefixed by "Algebraic") around scientific modeling with applied category theory
 - I joined in 2020 (the inflection point)
-- Now companies like Merck are listing "experience with AlgebraicJulia" as a job requirement for scientists
+- Companies like Merck now hire based on "experience with AlgebraicJulia"
 
 :::{.notes}
 Ham up the connection between me joining and our present success.
@@ -353,18 +353,18 @@ The fact that our software is so generic means that we have to write less code o
 ## The Future of AlgebraicJulia
 
 :::{.rmenv title="Strategy"}
-1. Deliver high-quality results for individual domain-specific grants.
+1. [ ] Deliver high-quality results for individual domain-specific grants.
 2. Along the way, carefully develop and refine general-purpose open-source tools for scientists solving the world's problems.
 :::
 
-| Domain                                 | Funders and Collaborators                                                  |
-|----------------------------------------|----------------------------------------------------------------------------|
-| Epidemiology                           | ASKEM DARPA Project, University of Saskatchewan, DARPA YFA award for James |
-| Multiphysics                           | ASKEM DARPA Project                                                        |
-| Task modeling and planning             | PTG DARPA Project                                                          |
-| Industrial process and data management | CMU, NIST, Chevron                                                         |
-| Compositional statistical modeling     | AFOSR YIP award for Evan                                                   |
-| Education and outreach                 | Mozilla                                                                    |
+| Domain                                 | Funders and Collaborators                                                        |
+|----------------------------------------|----------------------------------------------------------------------------------|
+| Epidemiology                           | ASKEM DARPA Project, University of Saskatchewan, DARPA YFA award (PI: Fairbanks) |
+| Multiphysics                           | ASKEM DARPA Project                                                              |
+| Task modeling and planning             | PTG DARPA Project                                                                |
+| Industrial process and data management | CMU, NIST, Chevron                                                               |
+| Compositional statistical modeling     | AFOSR YIP award (PI: Patterson)                                                  |
+| Education and outreach                 | Mozilla                                                                          |
 
 ## What can you do...
 
