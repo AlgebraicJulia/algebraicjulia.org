@@ -11,7 +11,8 @@
 
   <!-- CSS -->
   
-  
+   <link rel="stylesheet" href="/libs/highlight/styles/atom-one-dark.css">
+   
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <style>.bg-primary {
   background-color: #3f6388 !important;
@@ -130,15 +131,15 @@ padding-right:  10px;
         <h2>Packages</h2></p>
  <div style="text-align:center;"> <table class="table table-responsive"> <thead><tr><th align="left">Name</th><th align="left">Description</th><th align="center">Development Status</th></tr></thead><tbody><tr><td align="left"><a href="https://algebraicjulia.github.io/Catlab.jl/dev/"><code>Catlab.jl</code></a></td><td align="left">A framework for applied category theory in the Julia language</td><td align="center"><a class="github-button" href="https://github.com/AlgebraicJulia/Catlab.jl" data-size="large" aria-label="Catlab.jl on GitHub">Catlab.jl on GitHub</a></br> The package is nearing it's <code>v1.0.0</code> release</td></tr><tr><td align="left"><a href="https://algebraicjulia.github.io/AlgebraicPetri.jl/dev/"><code>AlgebraicPetri.jl</code></a></td><td align="left">Build petri net agent based models compositionally</td><td align="center"><a class="github-button" href="https://github.com/AlgebraicJulia/AlgebraicPetri.jl" data-size="large" aria-label="View on GitHub">AlgebraicPetri.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially</td></tr><tr><td align="left"><a href="https://github.com/AlgebraicJulia/AlgebraicRelations.jl"><code>AlgebraicRelations.jl</code></a></td><td align="left">Build SQL categorically</td><td align="center"><a class="github-button" href="https://github.com/AlgebraicJulia/AlgebraicRelations.jl" data-size="large" aria-label="View on GitHub">AlgebraicRelations.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially.</td></tr><tr><td align="left"><a href="https://algebraicjulia.github.io/AlgebraicDynamics.jl/dev/"><code>AlgebraicDynamics.jl</code></a></td><td align="left">Build dynamical systems compositionally</td><td align="center"><a class="github-button" href="https://github.com/AlgebraicJulia/AlgebraicDynamics.jl" data-size="large" aria-label="View on GitHub">AlgebraicDynamics.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially.</td></tr><tr><td align="left"><a href="https://algebraicjulia.github.io/CombinatorialSpaces.jl/dev/"><code>CombinatorialSpaces.jl</code></a></td><td align="left">Simplicial sets and other combinatorial models of geometric spaces</td><td align="center"><a class="github-button" href="https://github.com/AlgebraicJulia/CombinatorialSpaces.jl" data-size="CombinatorialSpaces" aria-label="View on GitHub">CombinatorialSpaces.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially.</td></tr></tbody></table>  </div>
 <p>More info on these packages can be found below.</p>
-<div class="alert alert-info" role="alert">
+<p><div class="alert alert-info" role="alert">
 Add packages like this:</p>
 <ul>
 <li><p>In the code itself: <code>using Pkg; Pkg.add&#40;&quot;Catlab&quot;&#41;</code>, or</p>
 </li>
-<li><p>In the REPL, hit <code>&#93;</code> to enter Pkg mode and type <code>add Catlab</code></p>
+<li><p>In the REPL, hit <code>&#93;</code> to enter Pkg mode and type <code>add Catlab</code> More info can be found at the <a href="https://julialang.github.io/Pkg.jl/v1/getting-started">Pkg manager documentation</a>.</div></p>
 </li>
 </ul>
-<p>More info can be found at the <a href="https://julialang.github.io/Pkg.jl/v1/getting-started">Pkg manager documentation</a>.</div>
+
 <p>      </div>
     </div>
   </div>
@@ -222,6 +223,8 @@ Add packages like this:</p>
         <h2>Talks</h2></p>
 <h4 id="2023"><a href="#2023" class="header-anchor">2023</a></h4>
 <ul>
+<li><p><strong>Abstraction and Composition in Modeling and Simulation</strong>, Luke Morris, Andrew Baas, Jesus Arias, Maia Gaitlin, James Fairbanks, <em>SIAM Conference on Computational Science and Engineering</em>, March 2023. <a href="/assets/slides/siam-cse-2023.pdf">Slides</a>, <a href="https://meetings.siam.org/sess/dsp_talk.cfm?p&#61;124342">Abstract</a>, <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE&#61;75448">Schedule</a></p>
+</li>
 <li><p><strong>Computational Category Theory in Applied Mathematics</strong>, Owen Lynch and James Fairbanks, <em>Joint Mathematics Meetings</em>, January 2023. <a href="/assets/slides/jmm-talk-2023/talk.html">Slides</a></p>
 </li>
 </ul>
@@ -270,9 +273,7 @@ Add packages like this:</p>
       <div class="col-lg-10 mx-auto">
         <h2>Contributing</h2></p>
 <div class="lead">Help by contributing code, asking questions, or reporting issues.</div>
-
-<p>First off, <mark>thank you</mark> for your interest in AlgebraicJulia, no matter how you participate in the community.</p>
-
+<pre><code class="julia hljs">&lt;p&gt;First off, &lt;mark&gt;thank you&lt;/mark&gt; <span class="hljs-keyword">for</span> your interest <span class="hljs-keyword">in</span> AlgebraicJulia, no matter how you participate <span class="hljs-keyword">in</span> the community.&lt;/p&gt;</code></pre>
 <p>The packages in AlgebraicJulia are open-source and liberally licensed to allow wide private and commercial usage of the packages, like the base Julia language and many other packages in the ecosystem.</p>
 <p>Being open source, you are free to modify, use, or change your copy of the code - but if you make enhancements please consider opening a pull request &#40;<a href="https://kshyatt.github.io/post/firstjuliapr/">basic walkthrough here</a>&#41;.</p>
 <p>If you find issues, please open an issue on the relevant package&#39;s repository and we will try and address it as soon as possible.</p>
@@ -292,6 +293,10 @@ Add packages like this:</p>
 </footer>
 </div><!-- CONTENT ENDS HERE -->
   
+  
+      
+
+
   
   <script src="/libs/simple-scrollspy.min.js"></script>
   <script>
