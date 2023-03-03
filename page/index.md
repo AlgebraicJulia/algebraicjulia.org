@@ -196,9 +196,9 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 \lead{Help by contributing code, asking questions, or reporting issues.}
 
-```
+~~~
 <p>First off, <mark>thank you</mark> for your interest in AlgebraicJulia, no matter how you participate in the community.</p>
-```
+~~~
 
 The packages in AlgebraicJulia are open-source and liberally licensed to allow wide private and commercial usage of the packages, like the base Julia language and many other packages in the ecosystem.
 
