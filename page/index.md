@@ -2,9 +2,8 @@
      ABOUT
     ============================== -->
 
-::: {.callout-note}
-We are hiring a research software engineer [at UF](https://explore.jobs.ufl.edu/en-us/job/527710/systems-adminprogrammer-iv). If you would like to work on AlgebraicJulia full time, please apply!
-:::
+\alert{We are hiring a research software engineer at the University of Florida. If you would like to work on AlgebraicJulia full time, please [apply](https://explore.jobs.ufl.edu/en-us/job/527710/systems-adminprogrammer-iv)!}
+
 
 \begin{section}{title="Mission", name="Mission"}
 
