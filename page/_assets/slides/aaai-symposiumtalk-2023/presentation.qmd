@@ -1,0 +1,617 @@
+---
+title: "A Categorical Representation Language and Computational System for Knowledge-Based Robotic Task Planning"
+subtitle: "AAAI Unifying Representations for Robot Application Development (URRAD) Fall Symposium 2023"
+author: "**Angeline Aguinaldo**, Evan Patterson, James Fairbanks, William Regli, Jaime Ruiz"
+institute: ""
+date: "10/25/2023"
+date-format: long
+bibliography: assets/ref.bib
+footer: "AAAI Unifying Representations for Robot Application Development (URRAD) Fall Symposium 2023"
+number-sections: true
+format:
+  revealjs:
+    theme: [simple, custom.scss]
+    slide-number: true
+    logo: assets/umdcslogo.png
+    css: style.css
+jupyter: julia-1.9
+---
+
+## Authors {.unnumbered}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+::: {style="text-align: center; font-size: 80%"}
+&nbsp;  
+&nbsp;  
+![](assets/angeline.jpeg){fig-align="center"}
+*Angeline Aguinaldo* 
+
+PhD Candidate 
+
+**University of Maryland, College Park**
+&nbsp;  
+**Johns Hopkins University Applied Physics Laboratory**
+:::
+:::
+
+::: {.column width="20%"}
+::: {style="text-align: center; font-size: 80%"}
+&nbsp;  
+&nbsp;  
+![](assets/evan.jpeg){fig-align="center"}
+*Evan Patterson*
+
+Research Software Engineer
+
+**Topos Institute**
+:::
+:::
+
+::: {.column width="20%"}
+::: {style="text-align: center; font-size: 80%"}
+&nbsp;  
+&nbsp;  
+![](assets/james.jpeg){fig-align="center"}
+*James Fairbanks*
+
+Assistant Professor
+
+**University of Florida**
+:::
+:::
+
+::: {.column width="20%"}
+::: {style="text-align: center; font-size: 80%"}
+&nbsp;  
+&nbsp;  
+![](assets/regli.jpeg){fig-align="center"}
+*William Regli*
+
+Professor
+
+**University of Maryland, College Park**
+:::
+:::
+
+::: {.column width="20%"}
+::: {style="text-align: center; font-size: 80%"}
+&nbsp;  
+&nbsp;  
+![](assets/ruiz.jpeg){fig-align="center" width="180"}
+*Jaime Ruiz*
+
+Associate Professor
+
+**University of Florida**
+:::
+:::
+
+::::
+
+<!-- 
+
+
+NOTES:
+
+Motivation: having concise action models that combinatorially propagates state updates for relevant objects, considering complex states.
+Example: moving bread
+History of scene graphs, categories, planning etc.
+Related work - with scene graphs, derived predicates
+What is a category and functor?
+What is a C-Set?
+    How does this capture syntax and semantics?
+What is graph rewriting? How does it translate to DPO?
+Show how to define state in catlab
+Show how to define action in catlab
+How does forward planning work?
+Future work
+    PAC for transferring plans between domains
+      Provides another dimension for which syntax and semantics and be separated
+    Data migrations for changing schemas 
+-->
+
+::: {.hidden}
+$$
+  \newcommand{\N}{\mathbb{N}}
+  \newcommand{\R}{\mathbb{R}}
+  \newcommand{\cat}[1]{\mathsf{#1}}
+  \newcommand{\CAT}[1]{\mathsf{#1}}
+  \newcommand{\Set}{\CAT{Set}}
+  \DeclareMathOperator{\Path}{Path}
+  \newcommand{\catSet}[1]{\cat{#1}\text{-}\Set}
+  \DeclareMathOperator{\Ob}{Ob}
+  \DeclareMathOperator{\Hom}{Hom}
+$$
+:::
+
+<!-- # Overview {.unnumbered}
+
+1. Motivation & Related Work
+2. Category theory background
+3. Approach: C-sets and Double-Pushout (DPO) rewriting
+4. Let's plan!
+5. Future work -->
+
+# Motivation & Related Work
+
+## Modeling real-world domains for task planning is hard
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Let's imagine ourselves as a domain modeler...
+
+- **Want to be able to model everything**. Having many objects and relations in a scene can result in a combinatorial explosion of the search space due to the large number of facts.
+- **Want implicit ontological facts to be preserved after actions are applied**. Implicit structure is not propagated when an action is applied, even when using domain axioms [@Thiebaux2005].
+- **Want action models to be able to be defined generically**. Because structure is not implicitly preserved, it is important that all action effects are accounted for in the action model. 
+
+
+<!-- For symbolic task planning:
+
+a. Scene graphs translated into PDDL [@Knoblock1998]
+
+b. $\catSet{C}$ (typed graphs) and double-pushout rewriting (generalized graph rewriting) -->
+
+:::
+
+::: {.column width="50%"}
+![Ai2Thor [@Kolve2017] Kitchen Scene](assets/kitchen_scene.png){ fig-align="center" height="500"}
+
+<!-- ::: {.callout-tip title="Goal" icon="false"}
+The goal of this research is to develop more **structured and concise representations** of the world states and action models that **preserve ontological relationships** found in real-world planning problems.
+::: -->
+
+:::
+
+::::
+
+## How is it done today?
+&nbsp;  
+&nbsp;  
+![](assets/DoneToday.png){.center}
+[@Amiri2022],[@Galindo2008],[@Miao2023],[@Agia2022]
+
+## What is our proposed approach?
+&nbsp;  
+&nbsp;  
+![](assets/ProposedApproach.png){.center}
+
+<!-- ## Where does this fit?
+<!-- This work is centered around the desire to represent world states for task planning that adhere to ontological constraints. -->
+<!-- &nbsp;  
+&nbsp;  
+![](assets/History.png){.center} --> 
+
+# Category theory background
+
+## What is a category?
+&nbsp;  
+&nbsp; 
+&nbsp;  
+&nbsp;  
+**Definition**: A [category]{.define}, $\cat{C}$, consists of:
+
+- a collection of [objects]{.define}, $\text{Ob}(\cat{C})$
+- a collection of [morphisms]{.define} for every pairs of objects, $\text{Hom}_\cat{C}(X,Y)$ for $X, Y \in \text{Ob}(\cat{C})$
+- a composition operation, if $f: X \rightarrow Y$, $g: Y \rightarrow Z$ then $g \circ f: X \rightarrow Z$
+- an identity morphism for every object, $1_X: X \rightarrow X$
+
+satisfying the *associativity* law $h \circ (g \circ f) = (h \circ g) \circ f$ and *unitality* laws $f \circ 1_x = f$ and $1_y \circ f = f$ whenever these equations make sense.
+
+## What is a functor and natural transformation?
+:::: {.columns}
+
+::: {.column width="70%"}
+&nbsp;  
+**Definition**: A [functor]{.define}, $F: \cat{C} \rightarrow \cat{D}$, from a category $\cat{C}$ to a category $\cat{D}$, has two components, $F_0$ and $F_1$, where:
+
+- $F_0$ is a map between objects 
+
+    $F_0: \text{Ob}(\cat{C}) \rightarrow \text{Ob}(\cat{D})$
+
+- $F_1$ is a map between morphism sets 
+
+    $F_1: \text{Hom}_\cat{C}(X, Y) \rightarrow \text{Hom}_\cat{D}(F_0(X), F_0(Y))$
+
+&nbsp;  
+such that,
+
+- $F_1(g \circ f) = F_1(g) \circ F_1(f)$ for $f: X \rightarrow Y$ and $g: Y \rightarrow Z$ in $\cat{C}$
+- $F_1(1_X) = 1_{F_0(X)}$ for every $X \in \cat{C}$
+:::
+
+::: {.column width="30%"}
+&nbsp;  
+&nbsp;  
+![](assets/functor.jpeg)
+Taken from the [nLab](https://ncatlab.org/nlab/show/functor)
+:::
+
+::::
+&nbsp;  
+**Definition**: For functors, $F: \cat{C} \rightarrow \cat{D}$ and $G: \cat{C} \rightarrow \cat{D}$, a [natural transformation]{.define} between $\alpha: F \rightarrow G$ that associates every object in $C$ and with a morphism in $D$ such that composition is preserved.
+
+
+# Approach: C-sets and Double-Pushout (DPO) rewriting
+
+## What is a C-set?
+&nbsp;  
+**Definition**: A [$\cat{C}$-set]{.define} is a functor from $\cat{C} \rightarrow \cat{FinSet}$. $\cat{FinSet}$ is a category whose objects are finite sets and whose morphisms are set function maps.
+
+&nbsp;  
+
+**Example**: An example $\cat{C}$-set, called $G$, that stores data about people's favorite pet.
+
+![](assets/cset.png){fig-align="center" height="300"}
+
+The category of elements construction [@Riehl2016] packages the data of $G$ into a category resembling a knowledge graph [@Patterson2017].
+
+
+<!-- ## How does this relate to scene graphs? 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Scene graphs can be expressed as typed graphs.
+
+&nbsp;  
+
+::: {style="font-size:80%"}
+**Definition**: Let $V_T$ be a set of node types and $E_T$ be a set of edge types. A [typed graph]{.define}, $G = (V, E, \tau_v, \tau_e)$ consists of the following components:
+
+- $V$ is a set of nodes, and $E$ is a set of edges, where each edge is an ordered pair of nodes $(u, v) \exists V \times V$.
+- $\tau_v: V \rightarrow V_T$ is a node typing function that assigns a type from the set of node types $V_T$ to each node in $V$.
+- $\tau_e: E \rightarrow E_T$ is an edge typing function that assigns a type from the set of edge types $E_T$ to each edge in $E$.
+
+The typing functions $\tau_v$ and $\tau_e$ are used to associate types with nodes and edges in the graph. They ensure that each node and edge in the graph $G$ has a corresponding type in the type graph $T$.
+:::
+
+&nbsp;  
+
+All typed graphs are $\cat{C}$-sets. [@Brown2022]
+:::
+
+::: {.column width="50%"}
+[Scene graphs]{.define} are a specialized version of knowledge graphs that restrict its elements, attributes, and relations to facts obtained through vision-based perception and inference. [@Chang2023]
+
+![Visual Genome](assets/visualgenome.png)
+&nbsp;  
+:::
+
+:::: -->
+
+## What is Double-Pushout (DPO) rewrite rule?
+**Definition**: The category [$\catSet{C}$]{.define} is a category whose objects are $\cat{C}$-set functors and whose morphisms are natural transformations.
+
+[Action rules]{.define} are specified as spans in $\catSet{C}$.
+
+![](assets/DPO_Rewriting.png)
+
+# Let's Plan!
+
+## Let's define a world state
+
+::: {.panel-tabset}
+
+### Ontology
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{julia}
+#| echo: false
+#| output: false
+using Pkg
+cd("./julia")  # use this environment to avoid `constructor` error
+Pkg.activate(".")
+include("AlgebraicPlanning.jl")
+using PrettyTables
+```
+
+```{julia}
+#| echo: true
+#| output: false
+using Catlab
+using AlgebraicRewriting
+
+@present OntBreadOnly(FreeSchema) begin
+  ## Objects
+  Thing::Ob
+  BreadLoaf::Ob
+  BreadSlice::Ob
+  Countertop::Ob
+  Stool::Ob
+
+  ## Morphisms
+  f::Hom(BreadSlice, BreadLoaf)  # is part of
+  g::Hom(BreadLoaf, Thing)  # is-a
+  h::Hom(Countertop, Thing)  # is-a
+  l::Hom(Stool, Thing)  # is-a
+
+  ## Relations
+  InOn::Ob
+  inOn_l::Hom(InOn, Thing)
+  inOn_r::Hom(InOn, Thing)
+end
+
+# Create a C-set type based on ontology
+const BreadOnly = DynamicACSet("BreadOnly", OntBreadOnly)
+```
+
+For more information about **Catlab.jl** and **AlgebraicRewriting.jl**, visit [https://www.algebraicjulia.org/](https://www.algebraicjulia.org/).
+:::
+
+::: {.column width="50%"}
+![Ai2Thor [@Kolve2017] Kitchen Scene](assets/kitchen_scene.png){ fig-align="center" height="500"}
+:::
+
+::::
+
+### Data
+
+```{julia}
+#| echo: false
+#| output: false
+function make_cache(type, schema)
+  cache_dir = mkpath(joinpath(@__DIR__, "cache"))
+  cache = Dict(Iterators.map(ob -> begin
+      name = nameof(ob)
+      path = joinpath(cache_dir, "$name.json")
+      if isfile(path)
+        @info "Reading representables from $path"
+        rep = read_json_acset(type, path)
+      else
+        @info "Computing representable $name"
+        rep = representable(type, schema, name)
+        write_json_acset(rep, path)
+      end
+      name => (rep, 1)
+    end, generators(schema, :Ob)))
+end
+
+# compute representables 
+cache = make_cache(BreadOnly, OntBreadOnly)
+yBreadOnly = yoneda(BreadOnly; cache=cache)
+```
+
+::: {#foo .div style="height:50px"}
+```{julia}
+#| echo: true
+#| output: true
+#| output-location: column
+state = @acset_colim yBreadOnly begin
+
+  # Items in the scene
+  myCountertop::Countertop
+  myStool::Stool
+  naturesOwn::BreadLoaf
+  (slice0, slice1, slice2)::BreadSlice
+
+  # Nature's Own Breadloaf has three slices
+  # f::Hom(BreadSlice, BreadLoaf)
+  f(slice0) == naturesOwn  # is part of
+  f(slice1) == naturesOwn  # is part of
+  f(slice2) == naturesOwn  # is part of
+
+  # Breadloaf is on countertop (relation)
+  thing_on_thing::InOn
+  inOn_l(thing_on_thing) == naturesOwn
+  inOn_r(thing_on_thing) == myCountertop
+
+  # Breadloaf, counterop, and stool are things
+  # g::Hom(BreadLoaf, Thing)
+  # h::Hom(Countertop, Thing)
+  # l::Hom(Stool, Thing)
+  (thing1, thing2, thing3)::Thing
+  g(naturesOwn) == thing1
+  h(myCountertop) == thing2
+  l(myStool) == thing3
+
+end
+pretty_tables(state)
+```
+:::
+
+:::
+
+
+## Let's define a rewrite rule {.smaller}
+
+:::: {.columns}
+
+::: {.column width="35%"}
+&nbsp;  
+```{julia}
+#| echo: true
+#| output: false
+#| code-line-numbers: "|2-14|15-20|21-33|34-39|40-45"
+d = DRule(@migration(SchRule, OntBreadOnly, begin
+  L => @join begin
+    (thing1, thing2)::Thing
+    breadloaf::BreadLoaf
+    countertop::Countertop
+    stool::Stool
+
+    g(breadloaf) == thing1
+    h(countertop) == thing2
+
+    thing_on_thing::InOn
+    inOn_l(thing_on_thing) == breadloaf
+    inOn_r(thing_on_thing) == countertop
+  end
+  K => @join begin
+    thing::Thing
+    breadloaf::BreadLoaf
+    countertop::Countertop
+    stool::Stool
+  end
+  R => @join begin
+    (thing1, thing2)::Thing
+    breadloaf::BreadLoaf
+    countertop::Countertop
+    stool::Stool
+
+    g(breadloaf) == thing1
+    h(stool) == thing2
+
+    thing_on_thing::InOn
+    inOn_l(thing_on_thing) == breadloaf
+    inOn_r(thing_on_thing) == stool
+  end
+  l => begin
+    thing => thing1
+    breadloaf => breadloaf
+    countertop => countertop
+    stool => stool
+  end
+  r => begin
+    thing => thing1
+    breadloaf => breadloaf
+    countertop => countertop
+    stool => stool
+  end
+end))
+```
+
+```{julia}
+#| echo: false
+#| output: false
+move_bread_action = make_rule(d.diag, yBreadOnly)
+```
+:::
+
+::: {.column width="65%"}
+![](assets/movebread.png){fig-align="center"}
+:::
+
+::::
+
+## Let's apply the rule
+
+```{julia}
+#| echo: true
+#| output: true
+#| output-location: column-fragment
+new_state = apply_rule(move_bread_action, state)
+pretty_tables(new_state)
+```
+&nbsp;  
+
+### Ways rewriting can fail
+
+- Dangling condition, unable to resolve mapping after the double pushout
+- Objects are not properly identified because they not being included in the `K` (keep) part of the rule
+
+## What does forward planning look like?
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](assets/forwardplan.png){fig-align="center" height="600"}
+:::
+
+::: {.column width="60%"}
+```
+ForwardPlan(world::ACSet, goal::ACSet, rules_dict::Dict, rule_limits::Dict, config::FFConfig)
+Executes forward planning search to find a sequence or all sequences of applicable DPO rewriting rules. A sequence of applicable DPO rewriting rules that transform an initial state to a goal state is called a plan.
+```
+
+```{.julia}
+function ForwardPlan(world::ACSet, goal::ACSet, rules_dict::Dict, rule_limits::Dict, config::FFConfig)
+
+  # Exit criteria: goal is reached
+  if homomorphism(goal, world, monic=true) !== nothing 
+    println("Goal reached.")
+    return plan
+  end
+
+  applicable = find_applicable_rules(world, rules_dict)
+
+  # Backtrack criteria: no applicable rules
+  if length(applicable) <= 0
+    throw("No applicable rules found! Terminate path...")
+  end
+
+  try
+    for rule_hom in applicable  # try all applicable rules in order
+      selected = rule_hom.first
+
+      # Backtrack criteria: rule applied too many times
+      try
+        if config.rule_usage[selected] >= rule_limits[selected]
+          println("Abort path. Rule used too many times.")
+          continue
+        end
+      catch
+        config.rule_usage[selected] = 1  # fails if key doesn't exist, initialize
+      end
+
+      # apply rule and add to plan
+      prev_world = world
+      try
+        world = rewrite(rules_dict[selected].rule, world)
+      catch e
+        throw("Could not apply rule! " * string(e))
+      end
+      append!(config.plan, [rules_dict[selected].rule => rule_hom.second])  # include both rule and matched homomorphism
+
+      try
+        config.num_step =+ 1
+        config.plan = ForwardPlan(world, goal, rules_dict, rule_limits, config)
+        return config.plan
+      catch e
+        world = prev_world
+        pop!(config.plan)
+        println("Path failed. Try a different path.")
+        # println(string(e))
+      end
+    end
+  catch e
+    throw("Something went wrong with error: " * string(e))
+  end
+
+  println("No plan found.")
+end
+```
+:::
+
+::::
+
+# Conclusion
+
+## Future Work
+
+<!-- - Plan transfer
+- Empirical benchmarking
+- Extending system to work with non-combinatorial data, e.g. numeric data with arithmetic -->
+
+### Parameterize action models using constraints
+Leverage composition to factor out applicability constraints and parameterize generic action models
+
+![](assets/PAC.png){fig-align="center" height="200"}
+
+### Migrating plans from one domain (ontology) to another
+Use functorial data migration [@Spivak2012] to translate actions to new domain ontologies
+
+![](assets/schema_migration.png){fig-align="center" height="200"}
+
+## In Summary
+&nbsp;  
+&nbsp;  
+
+- Our categorical representation allows a user to **formalize the ontological model of the domain** and **instantiate structured knowledge based on the ontology**. 
+- This method provides formal semantics for the use of **knowledge graphs and relational databases** to model world states and updates in planning.
+- Future work include designing mechanisms for **transferring plans between domains** and **extending this system to handle non-combinatorial data, such as numeric data**.
+
+## Acknowledgements
+&nbsp;  
+&nbsp;  
+
+- This work was partially funded by the U.S. Defense Advanced Research Projects Agency (DARPA) under contract \#HR00112220004. 
+- We thank **Kristopher Brown** and **Owen Lynch** from the Topos Institute for heavily contributing to the development of DPO rewriting and $\catSet{C}$ in [AlgebraicJulia](https://www.algebraicjulia.org/). 
+- We also thank the students of the [Ruiz HCI Lab](https://www.ruizlab.org/)---**Alexander Barquero**, **Rodrigo Calvo**, **Niriksha Regmi**, **Daniel Delgado**, **Andrew Tompkins**---who built the task guidance platform that inspired the examples in this paper. 
+- We thank **Dana Nau** for valuable feedback about this paper.
+
+## References

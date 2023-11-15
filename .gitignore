@@ -25,3 +25,6 @@ Manifest.toml
 
 page/__site
 web/
+
+# macOS
+.DS_Store

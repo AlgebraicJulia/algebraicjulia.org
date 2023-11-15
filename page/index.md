@@ -72,6 +72,10 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 \begin{section}{title="Publications", name="Publications"}
 
+#### 2023
+
+- **A Categorical Representation Language and Computational System for Knowledge-Based Planning**, 2023. Angeline Aguinaldo, Evan Patterson, James Fairbanks, William Regli, and Jaime Ruiz. _2023 AAAI Fall Symposium on Unifying Representations for Robot Application Development_. [arXiv](https://arxiv.org/abs/2305.17208), [Slides](/assets/slides/aaai-symposiumtalk-2023/presentation.html).
+
 #### 2022
 
 - **Compositional exploration of combinatorial scientific models**, 2022.
