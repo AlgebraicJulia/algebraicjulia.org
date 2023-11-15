@@ -1,0 +1,27 @@
+/*-- scss:defaults --*/
+
+$presentation-font-size-root: 24px;
+$footer-bg: #ff0000;
+
+/*-- scss:rules --*/
+
+figure figcaption {
+  text-align: center;
+}
+
+.quarto-figure {
+  margin-bottom: 0;
+}
+
+table tbody tr {
+  border-top: medium solid darkgray;
+}
+
+.define {
+  color: #007481;
+  font-weight: bold;
+}
+
+.footer {
+  font-size: 15px;
+}
