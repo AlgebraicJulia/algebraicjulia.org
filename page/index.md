@@ -155,6 +155,14 @@ If your mathematical background includes basic abstract algebra, you might also 
   [Individual.jl](https://github.com/slwu89/Individual.jl)), Sean Wu, _Applied
   Category Theory 2022, demo track,_ July 2022.
   [Video](https://www.youtube.com/watch?v=iNdH_U-C1Nc&t=31313s)
+- **Compile-time programming with CompTime.jl**, Owen Lynch,
+  _JuliaCon 2022_, July 2022.
+  [Abstract](https://pretalx.com/juliacon-2022/talk/DSB7E3/),
+  [Video](https://youtu.be/an6_N6RM8Zo)
+- **Declarative data transformation via graph transformation**, Kris Brown,
+  _JuliaCon 2022_, July 2022.
+  [Abstract](https://pretalx.com/juliacon-2022/talk/SHU83W/),
+  [Video](https://youtu.be/7Ao9_ffLSFg)
 - **Principles and pitfalls of designing software for applied category theory**,
   Evan Patterson, _Topos Institute Berkeley Seminar_, February 2022.
   [Slides](/assets/slides/topos-seminar-2022-02.pdf),
@@ -166,6 +174,9 @@ If your mathematical background includes basic abstract algebra, you might also 
   Patterson, _Topos Institute Colloquium_, December 2021.
   [Slides](/assets/slides/topos-colloquium-2021.pdf),
   [Video](https://youtu.be/Ra-PLnog_M0)
+- **Shaped Data with Acsets**, Owen Lynch, _JuliaCon 2021_, July 2021.
+  [Abstract](https://pretalx.com/juliacon2021/talk/NWRPGY/),
+  [Video](https://www.youtube.com/watch?v=ZzTJ3Hrw2w8)
 - **Computational categorical algebra with Catlab**, James Fairbanks, _Graph
   Transformation Theory and Applications (GReTA) Seminar_, May 2021.
   [Video](https://youtu.be/JSJ-DD_dcjk)
@@ -188,7 +199,7 @@ If your mathematical background includes basic abstract algebra, you might also 
   [Slides](/assets/slides/ucr-seminar-2020),
   [Video](https://youtu.be/z50pmzT8QMA)
 - **AlgebraicJulia: Applied category theory in Julia**, James Fairbanks,
-  _JuliaCon_, July 2020. [Slides](/assets/slides/juliacon-2020.pdf),
+  _JuliaCon 2020_, July 2020. [Slides](/assets/slides/juliacon-2020.pdf),
   [Video](https://youtu.be/7zr2qnud4XM)
 - **Realizing applied category theory in Julia**, Evan Patterson, _MIT
   Categories Seminar_, January 2020. [Video](https://youtu.be/7dmrDYQh4rc)
