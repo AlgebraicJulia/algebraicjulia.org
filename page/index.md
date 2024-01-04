@@ -74,7 +74,8 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### 2023
 
-- **A Categorical Representation Language and Computational System for Knowledge-Based Planning**, 2023. Angeline Aguinaldo, Evan Patterson, James Fairbanks, William Regli, and Jaime Ruiz. _2023 AAAI Fall Symposium on Unifying Representations for Robot Application Development_. [arXiv](https://arxiv.org/abs/2305.17208), [Slides](/assets/slides/aaai-symposiumtalk-2023/presentation.html).
+- **A Categorical Representation Language and Computational System for Knowledge-Based Planning**, 2023. Angeline Aguinaldo, Evan Patterson, James Fairbanks, William Regli, and Jaime Ruiz. _2023 AAAI Fall Symposium on Unifying Representations for Robot Application Development_. [arXiv](https://arxiv.org/abs/2305.17208), [Slides](/assets/slides/aaai-symposiumtalk-2023/presentation.html)
+- **A compositional account of motifs, mechanisms, and dynamics in biochemical regulatory networks**, 2023. Rebekah Aduddell, James Fairbanks, Amit Kumar, Pablo S. Ocal, Evan Patterson, Brandon T. Shapiro. [arXiv](https://arxiv.org/abs/2301.01445)
 
 #### 2022
 
@@ -174,7 +175,7 @@ If your mathematical background includes basic abstract algebra, you might also 
   Patterson, _Topos Institute Colloquium_, December 2021.
   [Slides](/assets/slides/topos-colloquium-2021.pdf),
   [Video](https://youtu.be/Ra-PLnog_M0)
-- **Shaped Data with Acsets**, Owen Lynch, _JuliaCon 2021_, July 2021.
+- **Shaped data with acsets**, Owen Lynch, _JuliaCon 2021_, July 2021.
   [Abstract](https://pretalx.com/juliacon2021/talk/NWRPGY/),
   [Video](https://www.youtube.com/watch?v=ZzTJ3Hrw2w8)
 - **Computational categorical algebra with Catlab**, James Fairbanks, _Graph
