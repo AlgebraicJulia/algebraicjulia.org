@@ -79,6 +79,9 @@ If your mathematical background includes basic abstract algebra, you might also 
   _2023 AAAI Fall Symposium on Unifying Representations for Robot Application Development_.
   [arXiv](https://arxiv.org/abs/2305.17208),
   [Slides](/assets/slides/aaai-symposiumtalk-2023/presentation.html)
+- **Structured and Decorated Cospans from the Viewpoint of Double Category Theory**, 2023.
+  Evan Patterson. _Applied Category Theory 2023_.
+  [arXiv](https://arxiv.org/abs/2304.00447), [DOI](https://doi.org/10.4204/EPTCS.397.13)
 - **A compositional account of motifs, mechanisms, and dynamics in biochemical regulatory networks**, 2023.
   Rebekah Aduddell, James Fairbanks, Amit Kumar, Pablo S. Ocal, Evan Patterson, Brandon T. Shapiro.
   [arXiv](https://arxiv.org/abs/2301.01445)
