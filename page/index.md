@@ -90,6 +90,7 @@ If your mathematical background includes basic abstract algebra, you might also 
   _Journal of Logical and Algebraic Methods in Programming_.
   [arXiv](https://arxiv.org/abs/2111.03784),
   [DOI](https://doi.org/10.1016/j.jlamp.2023.100888)
+- **Compositional Algorithms on Compositional Data: Deciding Sheaves on Presheaves**, 2023. Ernst Althaus, Benjamin Merlin Bumpus, James Fairbanks, Daniel Rosiak. [arXiv](https://doi.org/10.48550/arxiv.2302.05575)
 
 #### 2022
 
@@ -115,12 +116,14 @@ If your mathematical background includes basic abstract algebra, you might also 
   Patterson, Tyler Hanks, James Fairbanks. _International Conference on Graph
   Transformation (ICGT 2022)_. [arXiv](https://arxiv.org/abs/2111.03784v2),
   [DOI](https://doi.org/10.1007/978-3-031-09843-7_9)
+- **Categorical data structures for technical computing**, 2022. Evan   Patterson, Owen Lynch, James Fairbanks. _Compositionality_.
+  [arXiv](https://arxiv.org/abs/2106.04703), [DOI] (https://doi.org/10.32408/compositionality-4-5)
+- **Operadic Modeling of Dynamical Systems: Mathematics and Computation.**, 2022. Sophie Libkind,
+  Andrew Baas, Evan Patterson, James Fairbanks. _Electronic Proceedings in Theoretical Computer Science, 372, 192–206_. [arXiv](arXiv:2105.12282),
+  [DOI](https://doi.org/10.4204/eptcs.372.14)
 
 #### 2021
 
-- **Categorical data structures for technical computing**, 2021. Evan Patterson,
-  Owen Lynch, James Fairbanks. Accepted at _Compositionality_.
-  [arXiv](https://arxiv.org/abs/2106.04703)
 - **Operadic modeling of dynamical systems: mathematics and computation**, 2021.
   Sophie Libkind, Andrew Baas, Evan Patterson, James Fairbanks. _Applied
   Category Theory 2021_. [arXiv](https://arxiv.org/abs/2105.12282)
@@ -147,6 +150,8 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 - **Abstraction and Composition in Modeling and Simulation**, Luke Morris, Andrew Baas, Jesus Arias, Maia Gaitlin, James Fairbanks, _SIAM Conference on Computational Science and Engineering_, March 2023. [Slides](/assets/slides/siam-cse-2023.pdf), [Abstract](https://meetings.siam.org/sess/dsp_talk.cfm?p=124342), [Schedule](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75448)
 - **Computational Category Theory in Applied Mathematics**, Owen Lynch and James Fairbanks, _Joint Mathematics Meetings_, January 2023. [Slides](/assets/slides/jmm-talk-2023/talk.html)
+- **Characterizing Compositionality of LQR from the Categorical Perspective** 
+  Baike She, Tyler Hanks, James Fairbanks, Matthew Hale. Presented at _IEEE Conference on Decision and Control._, December, 2023. [arXiv](https://arxiv.org/abs/2305.01811) 
 
 #### 2022
 
