@@ -117,16 +117,15 @@ If your mathematical background includes basic abstract algebra, you might also 
   Transformation (ICGT 2022)_. [arXiv](https://arxiv.org/abs/2111.03784v2),
   [DOI](https://doi.org/10.1007/978-3-031-09843-7_9)
 - **Categorical data structures for technical computing**, 2022. Evan   Patterson, Owen Lynch, James Fairbanks. _Compositionality_.
-  [arXiv](https://arxiv.org/abs/2106.04703), [DOI] (https://doi.org/10.32408/compositionality-4-5)
-- **Operadic Modeling of Dynamical Systems: Mathematics and Computation.**, 2022. Sophie Libkind,
-  Andrew Baas, Evan Patterson, James Fairbanks. _Electronic Proceedings in Theoretical Computer Science, 372, 192–206_. [arXiv](arXiv:2105.12282),
-  [DOI](https://doi.org/10.4204/eptcs.372.14)
+  [arXiv](https://arxiv.org/abs/2106.04703), [DOI](https://doi.org/10.32408/compositionality-4-5)
 
 #### 2021
 
-- **Operadic modeling of dynamical systems: mathematics and computation**, 2021.
-  Sophie Libkind, Andrew Baas, Evan Patterson, James Fairbanks. _Applied
-  Category Theory 2021_. [arXiv](https://arxiv.org/abs/2105.12282)
+- **Operadic Modeling of Dynamical Systems: Mathematics and Computation**, 2021.
+  Sophie Libkind, Andrew Baas, Evan Patterson, James Fairbanks.
+  _Applied Category Theory 2021_.
+  [arXiv](https://arxiv.org/abs/2105.12282),
+  [DOI](https://doi.org/10.4204/eptcs.372.14)
 
 #### 2020
 
