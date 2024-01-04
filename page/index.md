@@ -74,8 +74,19 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 #### 2023
 
-- **A Categorical Representation Language and Computational System for Knowledge-Based Planning**, 2023. Angeline Aguinaldo, Evan Patterson, James Fairbanks, William Regli, and Jaime Ruiz. _2023 AAAI Fall Symposium on Unifying Representations for Robot Application Development_. [arXiv](https://arxiv.org/abs/2305.17208), [Slides](/assets/slides/aaai-symposiumtalk-2023/presentation.html)
-- **A compositional account of motifs, mechanisms, and dynamics in biochemical regulatory networks**, 2023. Rebekah Aduddell, James Fairbanks, Amit Kumar, Pablo S. Ocal, Evan Patterson, Brandon T. Shapiro. [arXiv](https://arxiv.org/abs/2301.01445)
+- **A Categorical Representation Language and Computational System for Knowledge-Based Planning**, 2023.
+  Angeline Aguinaldo, Evan Patterson, James Fairbanks, William Regli, and Jaime Ruiz.
+  _2023 AAAI Fall Symposium on Unifying Representations for Robot Application Development_.
+  [arXiv](https://arxiv.org/abs/2305.17208),
+  [Slides](/assets/slides/aaai-symposiumtalk-2023/presentation.html)
+- **A compositional account of motifs, mechanisms, and dynamics in biochemical regulatory networks**, 2023.
+  Rebekah Aduddell, James Fairbanks, Amit Kumar, Pablo S. Ocal, Evan Patterson, Brandon T. Shapiro.
+  [arXiv](https://arxiv.org/abs/2301.01445)
+- **Computational category-theoretic rewriting**, 2023.
+  Kristopher Brown, Evan Patterson, Tyler Hanks, James Fairbanks.
+  _Journal of Logical and Algebraic Methods in Programming_.
+  [arXiv](https://arxiv.org/abs/2111.03784),
+  [DOI](https://doi.org/10.1016/j.jlamp.2023.100888)
 
 #### 2022
 
@@ -99,7 +110,7 @@ If your mathematical background includes basic abstract algebra, you might also 
   [arXiv](https://arxiv.org/abs/2203.16345)
 - **Computational category-theoretic rewriting**, 2022. Kristopher Brown, Evan
   Patterson, Tyler Hanks, James Fairbanks. _International Conference on Graph
-  Transformation (ICGT 2022)_. [arXiv](https://arxiv.org/abs/2111.03784),
+  Transformation (ICGT 2022)_. [arXiv](https://arxiv.org/abs/2111.03784v2),
   [DOI](https://doi.org/10.1007/978-3-031-09843-7_9)
 
 #### 2021
