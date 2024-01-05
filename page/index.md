@@ -151,6 +151,7 @@ If your mathematical background includes basic abstract algebra, you might also 
 - **Computational Category Theory in Applied Mathematics**, Owen Lynch and James Fairbanks, _Joint Mathematics Meetings_, January 2023. [Slides](/assets/slides/jmm-talk-2023/talk.html)
 - **Characterizing Compositionality of LQR from the Categorical Perspective** 
   Baike She, Tyler Hanks, James Fairbanks, Matthew Hale. Presented at _IEEE Conference on Decision and Control._, December, 2023. [arXiv](https://arxiv.org/abs/2305.01811) 
+- **Categorical Chemistry**, Wilmer Leal, _University of Pamplona Deparment of Mathematics_, July 24, 2023. 
 
 #### 2022
 
