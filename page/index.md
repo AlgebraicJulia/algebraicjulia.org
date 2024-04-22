@@ -2,8 +2,6 @@
      ABOUT
     ============================== -->
 
-\alert{\begin{center}We are **hiring** a research software engineer at the University of Florida. If you would like to work on AlgebraicJulia full time, please [apply](https://explore.jobs.ufl.edu/en-us/job/527710/systems-adminprogrammer-iv)!\end{center}}
-
 
 \begin{section}{title="Mission", name="Mission"}
 
