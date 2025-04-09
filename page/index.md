@@ -21,9 +21,9 @@
 |:-----------------------------------------------------------------------------------------|--------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | [`Catlab.jl`](https://algebraicjulia.github.io/Catlab.jl/dev/) | A framework for applied category theory in the Julia language | <a class="github-button" href="https://github.com/AlgebraicJulia/Catlab.jl" data-size="large" aria-label="Catlab.jl on GitHub">Catlab.jl on GitHub</a></br> The package is nearing its `v1.0.0` release |
 | [`AlgebraicPetri.jl`](https://algebraicjulia.github.io/AlgebraicPetri.jl/dev/) | Build petri net agent based models compositionally | <a class="github-button" href="https://github.com/AlgebraicJulia/AlgebraicPetri.jl" data-size="large" aria-label="View on GitHub">AlgebraicPetri.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially |
-| [`AlgebraicRelations.jl`](https://github.com/AlgebraicJulia/AlgebraicRelations.jl) | Build SQL categorically | <a class="github-button" href="https://github.com/AlgebraicJulia/AlgebraicRelations.jl" data-size="large" aria-label="View on GitHub">AlgebraicRelations.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially. |
 | [`AlgebraicDynamics.jl`](https://algebraicjulia.github.io/AlgebraicDynamics.jl/dev/) | Build dynamical systems compositionally | <a class="github-button" href="https://github.com/AlgebraicJulia/AlgebraicDynamics.jl" data-size="large" aria-label="View on GitHub">AlgebraicDynamics.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially. |
 | [`CombinatorialSpaces.jl`](https://algebraicjulia.github.io/CombinatorialSpaces.jl/dev/) | Simplicial sets and other combinatorial models of geometric spaces | <a class="github-button" href="https://github.com/AlgebraicJulia/CombinatorialSpaces.jl" data-size="CombinatorialSpaces" aria-label="View on GitHub">CombinatorialSpaces.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially. |
+| [`Decapodes.jl`](https://algebraicjulia.github.io/Decapodes.jl/dev/) | Solving multiphysics PDEs with CombinatorialSpaces and the Discrete Exterior Calculus | <a class="github-button" href="https://github.com/AlgebraicJulia/Decapodes.jl" data-size="Decapodes" aria-label="View on GitHub">Decapodes.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially. |
 \end{table}
 \end{center}
 
@@ -61,6 +61,11 @@ If your mathematical background includes basic abstract algebra, you might also 
 - [_Category theory in context_](http://www.math.jhu.edu/~eriehl/context.pdf) by Riehl
 - _Basic category theory_ by Leinster ([arXiv](https://arxiv.org/abs/1612.09375))
 - _Category theory_ by Awodey
+
+You can also read some dissertations published by AlgebraicJulia team members:
+
+- _Composition and computation in dynamical systems_ by Sophie Libkind at [Stanford](https://searchworks.stanford.edu/view/in00000033411)
+- _Sequential, Hierarchical, and Analogical Plan Transfer in Robotics_ by Angeline Aguinaldo at UMD [slides](https://angelineaguinaldo.com/assets/slides/aguinaldo-defense/presentation.html#/title-slide)
 
 \end{section}
 
