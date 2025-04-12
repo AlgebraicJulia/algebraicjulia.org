@@ -70,6 +70,11 @@ If your mathematical background includes basic abstract algebra, you might also 
 
 \begin{section}{title="Publications", name="Publications"}
 
+#### 2024
+
+- **Automating Transfer of Robot Task Plans using Functorial Data Migrations**, 2024. Angeline Aguinaldo, Evan Patterson, William Regli. _IEEE Transactions for Automation Science and Engineering (Under review)_. [arXiv](https://arxiv.org/abs/2406.15961)
+
+
 #### 2023
 
 - **A Categorical Representation Language and Computational System for Knowledge-Based Planning**, 2023.
@@ -142,6 +147,14 @@ If your mathematical background includes basic abstract algebra, you might also 
     ============================== -->
 
 \begin{section}{title="Talks", name="Talks"}
+
+#### 2025
+
+- **Analogical Plan Transfer in Robotics using Functorial Data Migrations**, Angeline Aguinaldo, _AMS Joint Mathematics Meeting (JMM)_, January 2025. [Slides](https://angelineaguinaldo.com/assets/slides/amsjmm-act-2025/amsjmm2025.html#/title-slide), [Abstract](https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Paper/43161), [Schedule](https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Session/11464)
+
+#### 2024
+
+- **'What's the plan?', asked my robot**, Angeline Aguinaldo, _JuliaCon_, July 2024. [Slides](https://angelineaguinaldo.com/assets/slides/juliacon-2024/presentation.html#/title-slide), [Abstract](https://pretalx.com/juliacon2024/talk/BTHAFN/), [Video](https://www.youtube.com/watch?v=tkvp5aM0eT8)
 
 #### 2023
 
