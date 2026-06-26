@@ -36,6 +36,11 @@ More info on these packages can be found below.
   More info can be found at the [Pkg manager documentation](https://julialang.github.io/Pkg.jl/v1/getting-started).
   }
 
+As the AlgebraicJulia team has grown, we have branched out and now have some related projects
+
+1. [CatColab](https://catcolab.org/) an interactive editing platform based on the categorical logic approaches that power AlgebraicJulia
+2. [CODAC](https://github.com/CODAC-Centers/) a university center of excellence for research into compositional optimization, dynamics and control.
+
 \end{section}
 
 <!-- =============================
