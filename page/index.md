@@ -75,13 +75,32 @@ You can also read some dissertations published by AlgebraicJulia team members:
 
 \begin{section}{title="Publications", name="Publications"}
 
+#### 2025
+
+Starting in 2025 we 
+
+- **Distributed Multi-agent Coordination over Cellular Sheaves**, 2025. Hanks, T., Riess, H., Cohen, S., Gross, T., Hale, M., & Fairbanks, J. _IEEE Conference on Decision and Control_. [arXiv](https://doi.org/10.48550/arXiv.2504.02049)
+
 #### 2024
 
+- **A compositional account of motifs, mechanisms, and dynamics in biochemical regulatory networks**, 2024. Aduddell, R., Fairbanks, J., Kumar, A., Ocal, P. S., Patterson, E., & Shapiro, B. T. _Compositionality, 6, 2_. [DOI](https://doi.org/10.32408/compositionality-6-2)
+- **Decapodes: A diagrammatic tool for representing, composing, and computing spatialized partial differential equations**, 2024. Morris, L., Baas, A., Arias, J., Gatlin, M., Patterson, E., & Fairbanks, J. P. _Journal of Computational Science, 81, 102345_. [DOI](https://doi.org/10.1016/j.jocs.2024.102345)
+- **Computational category-theoretic rewriting**, 2023. Brown, K., Patterson, E., Hanks, T., & Fairbanks, J. _Journal of Logical and Algebraic Methods in Programming, 134, 100888_. [DOI](https://doi.org/10.1016/j.jlamp.2023.100888)
+
 - **Automating Transfer of Robot Task Plans using Functorial Data Migrations**, 2024. Angeline Aguinaldo, Evan Patterson, William Regli. _IEEE Transactions for Automation Science and Engineering (Under review)_. [arXiv](https://arxiv.org/abs/2406.15961)
+
+- **How nice is this functor? Two squares and some homology go a long way**, 2024. Bumpus, B. M., Fairbanks, J., Genovese, F., Puca, C., & Rosiak, D. _Proceedings of Applied Category Theory_.
+- **Modeling Model Predictive Control: A Category Theoretic Framework for Multistage Control Problems**, 2024. Hanks, T., She, B., Hale, M., Patterson, E., Klawonn, M., & Fairbanks, J. _2024 American Control Conference (ACC), 4850–4857_. [DOI](https://doi.org/10.23919/ACC60939.2024.10644848)
+- **GATlab: Modeling and Programming with Generalized Algebraic Theories**, 2024. Lynch, O., Brown, K., Fairbanks, J., & Patterson, E. _Electronic Notes in Theoretical Informatics and Computer Science, 4_.
+- **Generalized Gradient Descent is a Hypergraph Functor**, 2024. Hanks, T., Klawonn, M., & Fairbanks, J. _Applied Category Theory_. [DOI](https://doi.org/10.48550/arXiv.2403.19845)
 
 
 #### 2023
 
+- **A diagrammatic view of differential equations in physics**, 2023. Evan
+  Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks. _Mathematics in
+  Engineering_. [arXiv](https://arxiv.org/abs/2204.01843),
+  [DOI](https://doi.org/10.3934/mine.2023036)
 - **A Categorical Representation Language and Computational System for Knowledge-Based Planning**, 2023.
   Angeline Aguinaldo, Evan Patterson, James Fairbanks, William Regli, and Jaime Ruiz.
   _2023 AAAI Fall Symposium on Unifying Representations for Robot Application Development_.
@@ -107,10 +126,6 @@ You can also read some dissertations published by AlgebraicJulia team members:
   2022_. [arXiv](https://arxiv.org/abs/2206.08755),
   [Slides](https://msp.cis.strath.ac.uk/act2022/slides/ACT2022_slides_2062.pdf),
   [Video](https://www.youtube.com/watch?v=KsxKNzUnE6E&t=24918s)
-- **A diagrammatic view of differential equations in physics**, 2022. Evan
-  Patterson, Andrew Baas, Timothy Hosgood and James Fairbanks. _Mathematics in
-  Engineering_. [arXiv](https://arxiv.org/abs/2204.01843),
-  [DOI](https://doi.org/10.3934/mine.2023036)
 - **Compositional modeling with stock and flow diagrams**, 2022. John Baez,
   Xiaoyan Li, Sophie Libkind, Nathaniel Osgood, Evan Patterson. _Applied
   Category Theory 2022_. [arXiv](https://arxiv.org/abs/2205.08373),
@@ -154,6 +169,11 @@ You can also read some dissertations published by AlgebraicJulia team members:
 \begin{section}{title="Talks", name="Talks"}
 
 #### 2025
+
+- **Multigrid Methods for Structure Preserving Discretizations**, 2025. Carlson, K. _22ND Copper Mountain Conference on Multigrid Methods, Copper Mountain, CO_. [Talk]
+- **Modeling with ACT for Compositional Decision Making**, 2025. Fairbanks, J. _American Control Conference, Denver, CO_. [Talk]
+- **Compositional Development of Compositional Mathematics**, 2025. Fairbanks, J., & Patterson, E. _Applied Category Theory, Gainesville, FL_. [Talk]
+- **A compositional account of motifs, mechanisms, and dynamics in biochemical regulatory networks**, 2024. Fairbanks, J. P., Aduddell, R., Kumar, A., Ocal, P. S., Patterson, E., & Shapiro, B. T. _AMS Southeastern Sectional Meeting, Tallahassee, FL_. [Talk]
 
 - **Analogical Plan Transfer in Robotics using Functorial Data Migrations**, Angeline Aguinaldo, _AMS Joint Mathematics Meeting (JMM)_, January 2025. [Slides](https://angelineaguinaldo.com/assets/slides/amsjmm-act-2025/amsjmm2025.html#/title-slide), [Abstract](https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Paper/43161), [Schedule](https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Session/11464)
 
