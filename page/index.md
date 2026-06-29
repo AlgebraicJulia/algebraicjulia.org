@@ -92,7 +92,6 @@ Please keep track of our latest publications at [gataslab.org/publications](http
 
 - **A compositional account of motifs, mechanisms, and dynamics in biochemical regulatory networks**, 2024. Aduddell, R., Fairbanks, J., Kumar, A., Ocal, P. S., Patterson, E., & Shapiro, B. T. _Compositionality, 6, 2_. [DOI](https://doi.org/10.32408/compositionality-6-2)
 - **Decapodes: A diagrammatic tool for representing, composing, and computing spatialized partial differential equations**, 2024. Morris, L., Baas, A., Arias, J., Gatlin, M., Patterson, E., & Fairbanks, J. P. _Journal of Computational Science, 81, 102345_. [DOI](https://doi.org/10.1016/j.jocs.2024.102345)
-- **Computational category-theoretic rewriting**, 2023. Brown, K., Patterson, E., Hanks, T., & Fairbanks, J. _Journal of Logical and Algebraic Methods in Programming, 134, 100888_. [DOI](https://doi.org/10.1016/j.jlamp.2023.100888)
 - **Automating Transfer of Robot Task Plans using Functorial Data Migrations**, 2024. Angeline Aguinaldo, Evan Patterson, William Regli. _IEEE Transactions for Automation Science and Engineering (Under review)_. [arXiv](https://arxiv.org/abs/2406.15961)
 - **How nice is this functor? Two squares and some homology go a long way**, 2024. Bumpus, B. M., Fairbanks, J., Genovese, F., Puca, C., & Rosiak, D. _Proceedings of Applied Category Theory_.
 - **Modeling Model Predictive Control: A Category Theoretic Framework for Multistage Control Problems**, 2024. Hanks, T., She, B., Hale, M., Patterson, E., Klawonn, M., & Fairbanks, J. _2024 American Control Conference (ACC), 4850–4857_. [DOI](https://doi.org/10.23919/ACC60939.2024.10644848)
@@ -175,15 +174,15 @@ Please keep track of our latest publications at [gataslab.org/publications](http
 
 #### 2025
 
-- **Multigrid Methods for Structure Preserving Discretizations**, 2025. Carlson, K. _22ND Copper Mountain Conference on Multigrid Methods, Copper Mountain, CO_. [Talk]
-- **Modeling with ACT for Compositional Decision Making**, 2025. Fairbanks, J. _American Control Conference, Denver, CO_. [Talk]
-- **Compositional Development of Compositional Mathematics**, 2025. Fairbanks, J., & Patterson, E. _Applied Category Theory, Gainesville, FL_. [Talk]
-- **A compositional account of motifs, mechanisms, and dynamics in biochemical regulatory networks**, 2024. Fairbanks, J. P., Aduddell, R., Kumar, A., Ocal, P. S., Patterson, E., & Shapiro, B. T. _AMS Southeastern Sectional Meeting, Tallahassee, FL_. [Talk]
+- **Multigrid Methods for Structure Preserving Discretizations**, 2025. Carlson, K. _22ND Copper Mountain Conference on Multigrid Methods, Copper Mountain, CO_.
+- **Modeling with ACT for Compositional Decision Making**, 2025. Fairbanks, J. _American Control Conference, Denver, CO_.
+- **Compositional Development of Compositional Mathematics**, 2025. Fairbanks, J., & Patterson, E. _Applied Category Theory, Gainesville, FL_.
 
 - **Analogical Plan Transfer in Robotics using Functorial Data Migrations**, Angeline Aguinaldo, _AMS Joint Mathematics Meeting (JMM)_, January 2025. [Slides](https://angelineaguinaldo.com/assets/slides/amsjmm-act-2025/amsjmm2025.html#/title-slide), [Abstract](https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Paper/43161), [Schedule](https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Session/11464)
 
 #### 2024
 
+- **A compositional account of motifs, mechanisms, and dynamics in biochemical regulatory networks**, 2024. Fairbanks, J. P., Aduddell, R., Kumar, A., Ocal, P. S., Patterson, E., & Shapiro, B. T. _AMS Southeastern Sectional Meeting, Tallahassee, FL_.
 - **'What's the plan?', asked my robot**, Angeline Aguinaldo, _JuliaCon_, July 2024. [Slides](https://angelineaguinaldo.com/assets/slides/juliacon-2024/presentation.html#/title-slide), [Abstract](https://pretalx.com/juliacon2024/talk/BTHAFN/), [Video](https://www.youtube.com/watch?v=tkvp5aM0eT8)
 
 #### 2023
