@@ -23,7 +23,7 @@
 | [`AlgebraicDynamics.jl`](https://algebraicjulia.github.io/AlgebraicDynamics.jl/dev/) | Build dynamical systems compositionally | <a class="github-button" href="https://github.com/AlgebraicJulia/AlgebraicDynamics.jl" data-size="large" aria-label="View on GitHub">AlgebraicDynamics.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially. |
 | [`CombinatorialSpaces.jl`](https://algebraicjulia.github.io/CombinatorialSpaces.jl/dev/) | Simplicial sets and other combinatorial models of geometric spaces | <a class="github-button" href="https://github.com/AlgebraicJulia/CombinatorialSpaces.jl" data-size="CombinatorialSpaces" aria-label="View on GitHub">CombinatorialSpaces.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially. |
 | [`Decapodes.jl`](https://algebraicjulia.github.io/Decapodes.jl/dev/) | Solving multiphysics PDEs with CombinatorialSpaces and the Discrete Exterior Calculus | <a class="github-button" href="https://github.com/AlgebraicJulia/Decapodes.jl" data-size="Decapodes" aria-label="View on GitHub">Decapodes.jl on GitHub</a></br> Functionality is mostly built-out, but the API may change substantially. |
-| [`CellularSheaves.jl`](https://algebraicjulia.github.io/CellularSheaves.jl/dev/) | Modeling distributed and decentralized sytems with cellular/coordination sheaves  | <a class="github-button" href="https://github.com/AlgebraicJulia/CellularSheaves.jl" data-size="CellularSheaves" aria-label="View on GitHub">CellularSheaves.jl on GitHub</a></br> Under active development. |
+| [`CellularSheaves.jl`](https://algebraicjulia.github.io/CellularSheaves.jl/dev/) | Modeling distributed and decentralized systems with cellular/coordination sheaves | <a class="github-button" href="https://github.com/AlgebraicJulia/CellularSheaves.jl" data-size="large" aria-label="View on GitHub">CellularSheaves.jl on GitHub</a></br> Under active development. |
 \end{table}
 \end{center}
 
@@ -82,7 +82,7 @@ You can also read some dissertations published by AlgebraicJulia team members:
 
 #### Latest
 
-Please keep track of our latest publications at [](gataslab.org/publications) and [](topos.institute/work/output).
+Please keep track of our latest publications at [gataslab.org/publications](https://gataslab.org/publications) and [topos.institute/work/output](https://topos.institute/work/output).
 
 #### 2025
 
